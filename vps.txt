@@ -1,0 +1,24 @@
+ VPS Information
+🖥️ Connection Details
+Field	Value
+Host/IP	187.77.111.16
+SSH Port	22
+Username	root
+Password	Your root password (you set this)
+🔑 SSH Command
+bash
+ssh root@187.77.111.16
+📂 Your Projects on this VPS
+Project	Location
+VerseIQ	/root/verseiq
+Hunter/Bounty Tools	/root/hunter
+Nginx Config	/etc/nginx/sites-available/default
+🌐 Your Sites
+Site	URL	Status
+VerseIQ	http://useverseiq.com	✅ Live
+VerseIQ (IP)	http://187.77.111.16	✅ Live
+🚀 Quick Commands
+
+
+cd /path/perfecthold.online
+ls -l
