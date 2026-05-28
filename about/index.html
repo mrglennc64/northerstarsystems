@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact · Northern Star Systems</title>
-<meta name="description" content="Get in touch with Northern Star Systems. One inbox for sales, support, and press; a dedicated address for security disclosures.">
+<title>About · Northern Star Systems</title>
+<meta name="description" content="Northern Star Systems builds precision-grade infrastructure for metadata validation, rights-chain intelligence, and automated communications auditing.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter+Tight:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -118,8 +118,8 @@ nav {
 }
 .nav-cta:hover { background: #000 !important; color: var(--cream) !important; }
 
-.contact-hero {
-  padding: 96px 0 64px;
+.page-hero {
+  padding: 96px 0 56px;
   border-bottom: 1px solid var(--rule);
 }
 .page-eyebrow {
@@ -138,65 +138,18 @@ nav {
   width: 32px; height: 1px;
   background: var(--ink-3);
 }
-.contact-hero h1 {
+.page-hero h1 {
   font-family: var(--display);
   font-weight: 400;
-  font-size: clamp(40px, 5.5vw, 68px);
-  line-height: 1.02;
-  letter-spacing: -1.5px;
-  margin-bottom: 28px;
-  max-width: 880px;
+  font-size: clamp(36px, 4.8vw, 60px);
+  line-height: 1.05;
+  letter-spacing: -1.3px;
+  margin-bottom: 0;
+  max-width: 980px;
   font-feature-settings: 'ss01';
 }
-.contact-hero h1 .italic { font-style: italic; font-weight: 300; color: var(--ink-2); }
-.contact-hero h1 .accent { color: var(--orange); font-style: italic; font-weight: 400; }
-.contact-hero p {
-  font-size: 19px;
-  line-height: 1.55;
-  color: var(--ink-2);
-  max-width: 640px;
-  font-weight: 300;
-  margin-bottom: 44px;
-}
-
-.contact-primary {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-  background: var(--ink);
-  color: var(--cream);
-  padding: 28px 36px;
-  border-radius: 10px;
-  text-decoration: none;
-  max-width: 760px;
-  transition: transform 0.15s ease, background 0.15s ease;
-}
-.contact-primary:hover { background: #000; transform: translateY(-1px); }
-.contact-primary .label {
-  font-family: var(--mono);
-  font-size: 11px;
-  letter-spacing: 1.5px;
-  color: rgba(250, 250, 247, 0.5);
-  text-transform: uppercase;
-  margin-bottom: 6px;
-  display: block;
-}
-.contact-primary .addr {
-  font-family: var(--display);
-  font-size: clamp(22px, 2.6vw, 30px);
-  font-weight: 400;
-  letter-spacing: -0.6px;
-  word-break: break-word;
-}
-.contact-primary .arrow {
-  margin-left: auto;
-  font-size: 28px;
-  font-weight: 300;
-  color: var(--orange);
-  flex-shrink: 0;
-  transition: transform 0.2s ease;
-}
-.contact-primary:hover .arrow { transform: translateX(4px); }
+.page-hero h1 .italic { font-style: italic; font-weight: 300; color: var(--ink-2); }
+.page-hero h1 .accent { color: var(--orange); font-style: italic; font-weight: 400; }
 
 .section { padding: 70px 0; border-top: 1px solid var(--rule); }
 .section-cream { background: var(--cream-2); }
@@ -219,117 +172,208 @@ nav {
 }
 .section-title .italic { font-style: italic; font-weight: 300; color: var(--ink-2); }
 .section-sub {
-  font-size: 16px;
+  font-size: 17px;
   color: var(--ink-2);
   font-weight: 300;
-  max-width: 640px;
+  max-width: 720px;
   line-height: 1.6;
   margin-bottom: 40px;
 }
 
-.route-grid {
+.capability-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 0;
   border-top: 1px solid var(--rule);
   border-left: 1px solid var(--rule);
 }
-.route-card {
-  padding: 30px 30px 28px;
-  border-right: 1px solid var(--rule);
-  border-bottom: 1px solid var(--rule);
-  background: var(--cream);
-  text-decoration: none;
-  color: inherit;
-  display: block;
-  position: relative;
-  transition: background 0.15s ease;
-}
-.route-card:hover { background: var(--cream-2); }
-.route-card:hover .route-arrow { opacity: 1; transform: translate(0, 0); }
-.route-card .tag {
-  display: inline-block;
-  font-family: var(--mono);
-  font-size: 10px;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  padding: 3px 9px;
-  border-radius: 3px;
-  background: rgba(31, 40, 50, 0.06);
-  color: var(--ink-2);
-  margin-bottom: 18px;
-}
-.route-card.security .tag { background: var(--green-bg); color: var(--green); }
-.route-card h3 {
-  font-family: var(--display);
-  font-size: 22px;
-  font-weight: 500;
-  letter-spacing: -0.5px;
-  margin-bottom: 10px;
-}
-.route-card p {
-  font-size: 14.5px;
-  color: var(--ink-2);
-  line-height: 1.55;
-  font-weight: 300;
-  margin-bottom: 14px;
-}
-.route-card .addr {
-  font-family: var(--mono);
-  font-size: 13px;
-  color: var(--ink);
-  border-bottom: 1px solid var(--rule-2);
-  padding-bottom: 3px;
-  display: inline-block;
-}
-.route-card.security .addr { color: var(--green); border-color: rgba(15, 110, 86, 0.3); }
-.route-arrow {
-  position: absolute;
-  top: 28px;
-  right: 28px;
-  opacity: 0;
-  transform: translate(-6px, 6px);
-  transition: all 0.2s ease;
-  color: var(--ink);
-  font-size: 18px;
-}
-
-.sla-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0;
-  border-top: 1px solid var(--rule);
-  border-left: 1px solid var(--rule);
-}
-.sla-cell {
+.capability {
   padding: 28px 30px;
   border-right: 1px solid var(--rule);
   border-bottom: 1px solid var(--rule);
   background: var(--cream);
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
 }
-.sla-cell .label {
+.capability .num {
   font-family: var(--mono);
-  font-size: 10.5px;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  color: var(--ink-3);
+  padding-top: 4px;
+  flex-shrink: 0;
+}
+.capability .text {
+  font-family: var(--display);
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: -0.4px;
+  line-height: 1.25;
+}
+
+.philosophy-list {
+  list-style: none;
+  border-top: 1px solid var(--rule);
+}
+.philosophy-list li {
+  padding: 20px 0;
+  border-bottom: 1px solid var(--rule);
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  align-items: baseline;
+  gap: 16px;
+}
+.philosophy-list .num {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--ink-3);
+  letter-spacing: 1.5px;
+}
+.philosophy-list .txt {
+  font-family: var(--display);
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: -0.5px;
+  color: var(--ink);
+  line-height: 1.3;
+}
+.philosophy-list .txt em {
+  font-style: italic;
+  color: var(--orange);
+  font-weight: 400;
+}
+
+.leadership-card {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 0;
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  background: var(--cream);
+  overflow: hidden;
+  max-width: 880px;
+}
+.leadership-body { padding: 40px 44px; }
+.leadership-body .role {
+  font-family: var(--mono);
+  font-size: 11px;
   letter-spacing: 1.5px;
   color: var(--ink-3);
   text-transform: uppercase;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
-.sla-cell .value {
+.leadership-body .name {
   font-family: var(--display);
-  font-size: 30px;
+  font-size: 36px;
   font-weight: 400;
-  letter-spacing: -0.8px;
-  color: var(--ink);
-  margin-bottom: 8px;
-  font-feature-settings: 'tnum';
+  letter-spacing: -1px;
+  line-height: 1.05;
+  margin-bottom: 14px;
 }
-.sla-cell p {
-  font-size: 13.5px;
+.leadership-body .focus {
+  font-size: 15px;
   color: var(--ink-2);
   font-weight: 300;
   line-height: 1.55;
 }
+.leadership-side {
+  background: var(--ink);
+  color: var(--cream);
+  padding: 40px 44px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.leadership-side .stat-label {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 1.5px;
+  color: rgba(250, 250, 247, 0.55);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.leadership-side .stat {
+  font-family: var(--display);
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: -0.4px;
+  margin-bottom: 20px;
+}
+.leadership-side .stat:last-child { margin-bottom: 0; }
+
+.origin-block {
+  max-width: 760px;
+}
+.origin-block p {
+  font-size: 19px;
+  font-weight: 300;
+  line-height: 1.55;
+  color: var(--ink);
+}
+.origin-block p + p { margin-top: 18px; }
+
+.final-cta {
+  background: var(--ink);
+  color: var(--cream);
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+}
+.final-cta::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -100px;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  border: 1px solid rgba(250, 250, 247, 0.04);
+  transform: translateY(-50%);
+}
+.final-cta::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 60px;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  border: 1px solid rgba(250, 250, 247, 0.06);
+  transform: translateY(-50%);
+}
+.final-cta-inner { position: relative; z-index: 2; max-width: 720px; }
+.final-cta h2 {
+  font-family: var(--display);
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 300;
+  letter-spacing: -1px;
+  line-height: 1.1;
+  margin-bottom: 22px;
+}
+.final-cta h2 .italic { font-style: italic; color: var(--orange); font-weight: 400; }
+.final-cta p {
+  font-size: 17px;
+  color: rgba(250, 250, 247, 0.7);
+  font-weight: 300;
+  margin-bottom: 36px;
+  max-width: 540px;
+  line-height: 1.55;
+}
+.btn-cta-light {
+  background: var(--cream);
+  color: var(--ink);
+  padding: 16px 32px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.15s ease;
+}
+.btn-cta-light:hover { background: white; transform: translateY(-1px); }
 
 footer {
   background: var(--cream);
@@ -382,19 +426,20 @@ footer {
 }
 
 @media (max-width: 900px) {
-  .route-grid { grid-template-columns: 1fr; }
-  .sla-grid { grid-template-columns: 1fr; }
+  .capability-grid { grid-template-columns: 1fr; }
+  .leadership-card { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
   .nav-links a:not(.nav-cta) { display: none; }
   .statusbar-right { display: none; }
-  .contact-primary { flex-direction: column; align-items: flex-start; }
-  .contact-primary .arrow { margin-left: 0; margin-top: 8px; }
 }
 @media (max-width: 560px) {
   .container { padding: 0 22px; }
   .nav-inner { padding: 18px 22px; }
   .statusbar-inner { padding: 0 22px; }
   .footer-grid { grid-template-columns: 1fr; }
+  .philosophy-list li { grid-template-columns: 40px 1fr; gap: 10px; }
+  .leadership-body, .leadership-side { padding: 30px 28px; }
+  .leadership-body .name { font-size: 30px; }
 }
 </style>
 </head>
@@ -436,85 +481,109 @@ footer {
   </div>
 </nav>
 
-<section class="contact-hero">
+<section class="page-hero">
   <div class="container">
-    <div class="page-eyebrow">REACH OUT</div>
+    <div class="page-eyebrow">ABOUT · NORTHERN STAR SYSTEMS</div>
     <h1>
-      Get in <span class="accent">touch.</span>
+      Precision-grade infrastructure for <span class="italic">metadata validation,</span> <span class="accent">rights-chain intelligence,</span> and automated communications auditing.
     </h1>
-    <p>One inbox for sales, support, and press. A separate address for security disclosures. We respond within one business day.</p>
-
-    <a href="mailto:hello@northernstarsystems.com" class="contact-primary">
-      <div>
-        <span class="label">Email us at</span>
-        <span class="addr">hello@northernstarsystems.com</span>
-      </div>
-      <span class="arrow">→</span>
-    </a>
   </div>
 </section>
 
 <section class="section">
   <div class="container">
-    <div class="section-eyebrow">— ROUTE YOUR MESSAGE</div>
-    <h2 class="section-title">Four reasons to write. <span class="italic">All land in the right place.</span></h2>
-    <p class="section-sub">Pick the card that matches what you need — each one opens an email with a useful subject line already filled in.</p>
+    <div class="section-eyebrow">— WHAT WE DO</div>
+    <h2 class="section-title">Four operational domains, <span class="italic">one platform.</span></h2>
 
-    <div class="route-grid">
-      <a class="route-card" href="mailto:hello@northernstarsystems.com?subject=Demo%20request">
-        <span class="tag">Sales · Demos</span>
-        <h3>See it against your catalog.</h3>
-        <p>A 30-minute walkthrough where we run Northern Star against your own data and show you exactly what we'd correct, validate, or surface.</p>
-        <span class="addr">hello@northernstarsystems.com</span>
-        <span class="route-arrow">→</span>
-      </a>
-      <a class="route-card" href="mailto:hello@northernstarsystems.com?subject=Support%20request">
-        <span class="tag">Customer support</span>
-        <h3>Issue with a live system.</h3>
-        <p>If something looks wrong in HeyRoya, Kataloghub, VerseIQ, SMPT, or any other system in the suite — write us with the system name and what you're seeing.</p>
-        <span class="addr">hello@northernstarsystems.com</span>
-        <span class="route-arrow">→</span>
-      </a>
-      <a class="route-card" href="mailto:hello@northernstarsystems.com?subject=Press%20%2F%20partnerships">
-        <span class="tag">Press · Partnerships</span>
-        <h3>Media, podcasts, partnerships.</h3>
-        <p>Press inquiries, podcast interviews, integration partnerships, and co-marketing. Tell us what you're working on and what you'd like from us.</p>
-        <span class="addr">hello@northernstarsystems.com</span>
-        <span class="route-arrow">→</span>
-      </a>
-      <a class="route-card security" href="mailto:security@northernstarsystems.com?subject=Vulnerability%20report">
-        <span class="tag">Security disclosure</span>
-        <h3>Found a vulnerability?</h3>
-        <p>Send vulnerability reports to security@. Acknowledged within 48 hours, triaged, and credited (with your permission) once fixed. See the <a href="/security/" style="color:var(--green); text-decoration:underline;">security page</a> for what to include.</p>
-        <span class="addr">security@northernstarsystems.com</span>
-        <span class="route-arrow">→</span>
-      </a>
+    <div class="capability-grid">
+      <div class="capability">
+        <span class="num">01</span>
+        <span class="text">Structured metadata validation systems</span>
+      </div>
+      <div class="capability">
+        <span class="num">02</span>
+        <span class="text">Royalty and rights-chain intelligence pipelines</span>
+      </div>
+      <div class="capability">
+        <span class="num">03</span>
+        <span class="text">Communications-surface auditing and drift detection</span>
+      </div>
+      <div class="capability">
+        <span class="num">04</span>
+        <span class="text">AI-driven workflow automation for publishers and rights-holders</span>
+      </div>
     </div>
   </div>
 </section>
 
 <section class="section section-cream">
   <div class="container">
-    <div class="section-eyebrow">— WHEN YOU'LL HEAR BACK</div>
-    <h2 class="section-title">Response times.</h2>
-    <p class="section-sub">We don't promise instant; we promise honest. These are the windows we actually hit, not aspirational SLAs.</p>
+    <div class="section-eyebrow">— WHY WE EXIST</div>
+    <h2 class="section-title">A closed-loop response to <span class="italic">structural failure modes.</span></h2>
+    <p class="section-sub" style="font-size: 19px; max-width: 760px; color: var(--ink); font-weight: 300;">
+      Modern rights and communications ecosystems fail due to inconsistent metadata, fragmented pipelines, and missing compliance signals. Northern Star Systems builds closed-loop systems that correct, validate, and monitor these surfaces with machine precision.
+    </p>
+  </div>
+</section>
 
-    <div class="sla-grid">
-      <div class="sla-cell">
-        <div class="label">General inquiries</div>
-        <div class="value">≤ 1 business day</div>
-        <p>Sales, support, press, and partnership messages sent to hello@.</p>
+<section class="section">
+  <div class="container">
+    <div class="section-eyebrow">— ARCHITECTURE PHILOSOPHY</div>
+    <h2 class="section-title">Five principles, <span class="italic">applied uniformly.</span></h2>
+    <p class="section-sub">Every system in the suite is built against the same set of architectural commitments. No exceptions, no per-customer drift.</p>
+
+    <ul class="philosophy-list">
+      <li><span class="num">/ 01</span><span class="txt"><em>Zero-trust</em> metadata handling</span></li>
+      <li><span class="num">/ 02</span><span class="txt"><em>Deterministic</em> evidence chains</span></li>
+      <li><span class="num">/ 03</span><span class="txt"><em>Immutable</em> audit trails</span></li>
+      <li><span class="num">/ 04</span><span class="txt"><em>Machine-readable</em> outputs</span></li>
+      <li><span class="num">/ 05</span><span class="txt"><em>Vendor-agnostic</em> integrations</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section section-cream">
+  <div class="container">
+    <div class="section-eyebrow">— LEADERSHIP</div>
+    <h2 class="section-title">Who's running this.</h2>
+
+    <div class="leadership-card">
+      <div class="leadership-body">
+        <div class="role">Founder &amp; Architect</div>
+        <div class="name">Glenn Carter</div>
+        <p class="focus">Focus: metadata systems, rights-chain workflows, and communications intelligence.</p>
       </div>
-      <div class="sla-cell">
-        <div class="label">Security reports</div>
-        <div class="value">≤ 48 hours</div>
-        <p>Acknowledgement of receipt and an initial triage assessment.</p>
+      <div class="leadership-side">
+        <div>
+          <div class="stat-label">Systems shipped</div>
+          <div class="stat">9 production · 1 platform</div>
+        </div>
+        <div>
+          <div class="stat-label">Domains</div>
+          <div class="stat">Music · Healthcare · Web · Comms</div>
+        </div>
       </div>
-      <div class="sla-cell">
-        <div class="label">Critical incidents</div>
-        <div class="value">&lt; 30 min</div>
-        <p>For active customers on production plans, during a confirmed material incident.</p>
-      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-eyebrow">— ORIGIN</div>
+    <h2 class="section-title">How it started.</h2>
+    <div class="origin-block">
+      <p>Northern Star Systems was created to unify metadata correction, validation, and communications auditing under a single deterministic framework.</p>
+      <p>The platform powers multiple vertical applications used by rights-holders, publishers, and enterprise communications teams.</p>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="container">
+    <div class="final-cta-inner">
+      <h2>Want to see the <span class="italic">framework</span> applied to your operation?</h2>
+      <p>A 30-minute walkthrough against your own catalog, workflow, or communications surface. Honest assessment, machine-readable output, no fluff.</p>
+      <a href="/contact/" class="btn-cta-light">Get in touch →</a>
     </div>
   </div>
 </section>
