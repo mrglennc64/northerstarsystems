@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Acquirers · NgineAgent · Northern Star Systems</title>
+<meta name="description" content="NgineAgent is a deterministic validation engine powering six vertical products across five industries. The acquisition overview: engine reference, product summaries, performance, and evidence chain.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter+Tight:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --cream: #FAFAF7;
+  --cream-2: #F2F1EC;
+  --ink: #1F2937;
+  --ink-2: #4A5563;
+  --ink-3: #8B92A0;
+  --rule: rgba(31, 40, 50, 0.12);
+  --rule-2: rgba(31, 40, 50, 0.22);
+  --orange: #FF6B35;
+  --green: #0F6E56;
+  --green-bg: #E8F2EE;
+  --red: #B23A48;
+  --display: 'Fraunces', 'Times New Roman', serif;
+  --sans: 'Inter Tight', -apple-system, BlinkMacSystemFont, sans-serif;
+  --mono: 'JetBrains Mono', 'Courier New', monospace;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: 'ss01', 'cv11';
+}
+
+.container { max-width: 1240px; margin: 0 auto; padding: 0 32px; }
+
+.statusbar {
+  background: var(--ink);
+  color: var(--cream);
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.statusbar-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+.statusbar-left { display: flex; gap: 24px; align-items: center; }
+.status-dot {
+  display: inline-block;
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: #4ADE80;
+  margin-right: 8px;
+  box-shadow: 0 0 0 3px rgba(74, 222, 128, 0.18);
+  animation: pulse 2.4s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 0 3px rgba(74, 222, 128, 0.18); }
+  50% { box-shadow: 0 0 0 6px rgba(74, 222, 128, 0.04); }
+}
+.statusbar-right { color: rgba(250, 250, 247, 0.55); }
+
+nav {
+  border-bottom: 1px solid var(--rule);
+  background: var(--cream);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(8px);
+}
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 32px;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--ink); }
+.brand-mark { width: 32px; height: 32px; flex-shrink: 0; }
+.brand-text {
+  font-family: var(--sans);
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: -0.4px;
+}
+.brand-text .accent { color: var(--orange); font-weight: 400; }
+.nav-links { display: flex; gap: 36px; align-items: center; }
+.nav-links a {
+  color: var(--ink-2);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  transition: color 0.15s ease;
+}
+.nav-links a:hover { color: var(--ink); }
+.nav-links a.current { color: var(--ink); }
+.nav-cta {
+  background: var(--ink);
+  color: var(--cream);
+  padding: 9px 18px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 500;
+  transition: background 0.15s ease;
+}
+.nav-cta:hover { background: #000 !important; color: var(--cream) !important; }
+
+.page-hero {
+  padding: 96px 0 56px;
+  border-bottom: 1px solid var(--rule);
+}
+.page-eyebrow {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: var(--ink-3);
+  margin-bottom: 28px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.page-eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 32px; height: 1px;
+  background: var(--ink-3);
+}
+.page-hero h1 {
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: clamp(36px, 4.8vw, 60px);
+  line-height: 1.05;
+  letter-spacing: -1.3px;
+  margin-bottom: 24px;
+  max-width: 980px;
+  font-feature-settings: 'ss01';
+}
+.page-hero h1 .italic { font-style: italic; font-weight: 300; color: var(--ink-2); }
+.page-hero h1 .accent { color: var(--orange); font-style: italic; font-weight: 400; }
+.page-hero p {
+  font-size: 19px;
+  color: var(--ink-2);
+  font-weight: 300;
+  max-width: 680px;
+  line-height: 1.6;
+}
+
+.section { padding: 70px 0; border-top: 1px solid var(--rule); }
+.section-cream { background: var(--cream-2); }
+.section-eyebrow {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 2.5px;
+  color: var(--orange);
+  margin-bottom: 18px;
+  text-transform: uppercase;
+}
+.section-title {
+  font-family: var(--display);
+  font-size: clamp(28px, 3.2vw, 38px);
+  font-weight: 400;
+  letter-spacing: -1px;
+  line-height: 1.1;
+  margin-bottom: 18px;
+  max-width: 720px;
+}
+.section-title .italic { font-style: italic; font-weight: 300; color: var(--ink-2); }
+.section-sub {
+  font-size: 17px;
+  color: var(--ink-2);
+  font-weight: 300;
+  max-width: 720px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+/* CEO overview */
+.origin-block { max-width: 780px; }
+.origin-block p {
+  font-size: 19px;
+  font-weight: 300;
+  line-height: 1.55;
+  color: var(--ink);
+}
+.origin-block p + p { margin-top: 18px; }
+.origin-block em { font-style: italic; color: var(--orange); font-weight: 400; }
+
+/* signal chain */
+.chain-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  border-top: 1px solid var(--rule);
+}
+.chain-step {
+  padding: 32px 26px 32px 0;
+  border-right: 1px solid var(--rule);
+}
+.chain-step:last-child { border-right: none; padding-right: 0; }
+.chain-step:not(:first-child) { padding-left: 26px; }
+.chain-stage {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  color: var(--orange);
+  margin-bottom: 18px;
+}
+.chain-title {
+  font-family: var(--display);
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+  margin-bottom: 10px;
+}
+.chain-desc {
+  font-size: 14px;
+  color: var(--ink-2);
+  line-height: 1.55;
+  font-weight: 300;
+}
+
+/* product summaries */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border-top: 1px solid var(--rule);
+  border-left: 1px solid var(--rule);
+}
+.product {
+  padding: 30px 28px 28px;
+  border-right: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  background: var(--cream);
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.2s ease;
+}
+.product:hover { background: var(--cream-2); }
+.product-num {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--ink-3);
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.product-tag {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 3px 9px;
+  border-radius: 3px;
+  background: rgba(31, 40, 50, 0.06);
+  color: var(--ink-2);
+}
+.product-tag.music { background: #FCE9DF; color: #8A3A12; }
+.product-tag.workflow { background: #E4ECF7; color: #1A3F70; }
+.product-tag.verify { background: #EEEDFE; color: #3C3489; }
+.product-tag.health { background: var(--green-bg); color: var(--green); }
+.product-name {
+  font-family: var(--display);
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: -0.6px;
+  margin-bottom: 10px;
+  line-height: 1.05;
+}
+.product-desc {
+  font-size: 14px;
+  color: var(--ink-2);
+  line-height: 1.55;
+  font-weight: 300;
+  margin-bottom: 12px;
+}
+.product-rules {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  color: var(--ink-3);
+  line-height: 1.5;
+}
+
+/* metrics */
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border-top: 1px solid var(--rule);
+  border-left: 1px solid var(--rule);
+}
+.metric {
+  padding: 30px 28px 34px;
+  border-right: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  background: var(--cream);
+}
+.metric .m-key {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  color: var(--orange);
+  margin-bottom: 14px;
+  text-transform: uppercase;
+}
+.metric .m-headline {
+  font-family: var(--display);
+  font-size: 21px;
+  font-weight: 400;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+.metric .m-desc {
+  font-size: 14px;
+  color: var(--ink-2);
+  font-weight: 300;
+  line-height: 1.55;
+}
+
+/* evidence chain */
+.evidence-flow {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--cream);
+  max-width: 960px;
+}
+.evidence-node {
+  flex: 1;
+  padding: 30px 28px;
+}
+.evidence-node:not(:last-child) { border-right: 1px solid var(--rule); }
+.evidence-node .e-step {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 1.5px;
+  color: var(--ink-3);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.evidence-node .e-name {
+  font-family: var(--display);
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: -0.4px;
+  margin-bottom: 8px;
+}
+.evidence-node .e-desc {
+  font-size: 13.5px;
+  color: var(--ink-2);
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.btn-row { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; margin-top: 36px; }
+.btn-primary {
+  background: var(--ink);
+  color: var(--cream);
+  padding: 14px 28px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+.btn-primary:hover { background: #000; transform: translateY(-1px); }
+.btn-secondary {
+  color: var(--ink);
+  padding: 14px 4px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: 1px solid var(--ink);
+  transition: opacity 0.15s ease;
+}
+.btn-secondary:hover { opacity: 0.6; }
+
+.final-cta {
+  background: var(--ink);
+  color: var(--cream);
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+}
+.final-cta::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -100px;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  border: 1px solid rgba(250, 250, 247, 0.04);
+  transform: translateY(-50%);
+}
+.final-cta::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 60px;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  border: 1px solid rgba(250, 250, 247, 0.06);
+  transform: translateY(-50%);
+}
+.final-cta-inner { position: relative; z-index: 2; max-width: 720px; }
+.final-cta h2 {
+  font-family: var(--display);
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 300;
+  letter-spacing: -1px;
+  line-height: 1.1;
+  margin-bottom: 22px;
+}
+.final-cta h2 .italic { font-style: italic; color: var(--orange); font-weight: 400; }
+.final-cta p {
+  font-size: 17px;
+  color: rgba(250, 250, 247, 0.7);
+  font-weight: 300;
+  margin-bottom: 36px;
+  max-width: 540px;
+  line-height: 1.55;
+}
+.btn-cta-light {
+  background: var(--cream);
+  color: var(--ink);
+  padding: 16px 32px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.15s ease;
+}
+.btn-cta-light:hover { background: white; transform: translateY(-1px); }
+
+footer {
+  background: var(--cream);
+  border-top: 1px solid var(--rule);
+  padding: 60px 0 32px;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 60px;
+  margin-bottom: 60px;
+}
+.footer-brand p {
+  font-size: 13.5px;
+  color: var(--ink-2);
+  margin-top: 18px;
+  max-width: 320px;
+  line-height: 1.6;
+  font-weight: 300;
+}
+.footer-col h4 {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  color: var(--ink-3);
+  text-transform: uppercase;
+  margin-bottom: 18px;
+  font-weight: 400;
+}
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 10px; }
+.footer-col a {
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  transition: color 0.15s ease;
+}
+.footer-col a:hover { color: var(--orange); }
+.footer-bottom {
+  border-top: 1px solid var(--rule);
+  padding-top: 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--ink-3);
+  letter-spacing: 1px;
+}
+
+@media (max-width: 900px) {
+  .chain-grid { grid-template-columns: 1fr 1fr; }
+  .chain-step { border-right: none; border-bottom: 1px solid var(--rule); padding: 26px 0 !important; }
+  .product-grid { grid-template-columns: 1fr 1fr; }
+  .metrics-grid { grid-template-columns: 1fr; }
+  .evidence-flow { flex-direction: column; }
+  .evidence-node:not(:last-child) { border-right: none; border-bottom: 1px solid var(--rule); }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+  .nav-links a:not(.nav-cta) { display: none; }
+  .statusbar-right { display: none; }
+}
+@media (max-width: 560px) {
+  .container { padding: 0 22px; }
+  .nav-inner { padding: 18px 22px; }
+  .statusbar-inner { padding: 0 22px; }
+  .product-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<div class="statusbar">
+  <div class="statusbar-inner">
+    <div class="statusbar-left">
+      <span><span class="status-dot"></span>ALL SYSTEMS OPERATIONAL</span>
+      <span>API 99.99%</span>
+    </div>
+    <div class="statusbar-right">
+      <span>NGINEAGENT · DETERMINISTIC</span>
+    </div>
+  </div>
+</div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="brand">
+      <svg class="brand-mark" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="100" cy="100" r="78" fill="none" stroke="#1F2937" stroke-width="1" opacity="0.15"/>
+        <circle cx="100" cy="100" r="62" fill="none" stroke="#1F2937" stroke-width="1" opacity="0.12"/>
+        <polygon points="100,38 112,100 100,108 88,100" fill="#FF6B35"/>
+        <polygon points="100,162 112,100 100,92 88,100" fill="#1F2937"/>
+        <polygon points="38,100 100,88 108,100 100,112" fill="#1F2937" opacity="0.35"/>
+        <polygon points="162,100 100,88 92,100 100,112" fill="#1F2937" opacity="0.35"/>
+        <circle cx="100" cy="100" r="5" fill="#FAFAF7" stroke="#1F2937" stroke-width="1.5"/>
+        <circle cx="100" cy="100" r="1.5" fill="#FF6B35"/>
+      </svg>
+      <span class="brand-text">Northern Star <span class="accent">Systems</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="/#engine">The Engine</a>
+      <a href="/#products">Products</a>
+      <a href="/#how">How it works</a>
+      <a href="/acquirers/" class="current">For Acquirers</a>
+      <a href="/contact/" class="nav-cta">Inquire →</a>
+    </div>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="page-eyebrow">FOR ACQUIRERS · NGINEAGENT</div>
+    <h1>
+      One <span class="accent">deterministic engine.</span> Six products. <span class="italic">Five industries.</span>
+    </h1>
+    <p>
+      NgineAgent is the asset: a stateless, deterministic validation and correction engine, already deployed inside six vertical products. This page is the acquisition overview — engine, products, performance, and evidence — without the data room.
+    </p>
+  </div>
+</section>
+
+<!-- 1 — CEO ENGINE OVERVIEW -->
+<section class="section">
+  <div class="container">
+    <div class="section-eyebrow">— CEO ENGINE OVERVIEW</div>
+    <h2 class="section-title">What you're acquiring.</h2>
+    <div class="origin-block">
+      <p>Most data-quality tools are databases, workflow apps, or models. NgineAgent is none of those. It is a <em>generic validation and correction engine</em> — one codebase that reads raw CSV/XLSX, validates every field against industry rulesets, applies deterministic corrections, and bounces a clean, procurement-ready master with a full evidence chain.</p>
+      <p>The same engine drives six products across five industries. New verticals are not rebuilds; they are <em>presets</em> — a ruleset and a domain configuration layered on top of the same deterministic core. That is the leverage in the asset: one engine to maintain, many markets to sell into.</p>
+      <p>It runs inside the customer's infrastructure, with no external calls and no data retention. Same input → same output → same score. No drift, no black box, nothing to explain to a regulator that the evidence chain doesn't already prove.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 2 — ENGINE REFERENCE -->
+<section class="section section-cream">
+  <div class="container">
+    <div class="section-eyebrow">— ENGINE REFERENCE</div>
+    <h2 class="section-title">The signal chain.</h2>
+    <p class="section-sub">NgineAgent is the mastering studio for data. Load the raw take, scan it on the console, run it through the correction rack, and bounce a procurement-ready master. Four deterministic stages, every field accounted for.</p>
+
+    <div class="chain-grid">
+      <div class="chain-step">
+        <div class="chain-stage">RAW TAKE — UPLOAD</div>
+        <h3 class="chain-title">Raw in.</h3>
+        <p class="chain-desc">CSV / XLSX catalog, exactly as recorded. The engine runs in place — no external calls, no retention.</p>
+      </div>
+      <div class="chain-step">
+        <div class="chain-stage">CONSOLE — VALIDATE</div>
+        <h3 class="chain-title">Every field gets a channel strip.</h3>
+        <p class="chain-desc">Each field is checked against the active domain ruleset, deterministically and reproducibly.</p>
+      </div>
+      <div class="chain-step">
+        <div class="chain-stage">RACK — CORRECT</div>
+        <h3 class="chain-title">Deterministic fixes, like plugins.</h3>
+        <p class="chain-desc">High-confidence corrections applied in the rack. No model, no guesswork — rules, in order.</p>
+      </div>
+      <div class="chain-step">
+        <div class="chain-stage">MASTER — BOUNCE</div>
+        <h3 class="chain-title">Procurement-ready master.</h3>
+        <p class="chain-desc">Clean output as CSV, XLSX, and a branded PDF — paired with the evidence that produced it.</p>
+      </div>
+    </div>
+
+    <div class="btn-row">
+      <a href="https://engine.usesmpt.com/" target="_blank" rel="noopener" class="btn-primary">Open the live engine <span>→</span></a>
+      <a href="https://engine.usesmpt.com/" target="_blank" rel="noopener" class="btn-secondary">Engine reference</a>
+    </div>
+  </div>
+</section>
+
+<!-- 3 — SIX PRODUCT SUMMARIES -->
+<section class="section">
+  <div class="container">
+    <div class="section-eyebrow">— SIX PRODUCT SUMMARIES</div>
+    <h2 class="section-title">One engine, six markets.</h2>
+    <p class="section-sub">Each product is the engine plus a domain preset: a ruleset tuned to one industry's standards. Same core, same evidence chain — different rules.</p>
+
+    <div class="product-grid">
+      <a class="product" href="https://heyroya.se/" target="_blank" rel="noopener">
+        <div class="product-num"><span>01</span><span class="product-tag music">Music rights</span></div>
+        <h3 class="product-name">HeyRoya</h3>
+        <p class="product-desc">Music rights validation. Catches metadata and rights-chain errors before they become lost royalties.</p>
+        <div class="product-rules">ISRC · ISWC · IPI · royalty gaps · §507(b)</div>
+      </a>
+      <a class="product" href="https://kataloghub.se/" target="_blank" rel="noopener">
+        <div class="product-num"><span>02</span><span class="product-tag music">Catalog</span></div>
+        <h3 class="product-name">Kataloghub</h3>
+        <p class="product-desc">Catalog correction. Validates and cleans catalog data against industry rulesets before ingestion.</p>
+        <div class="product-rules">ISRC · ISWC · IPI · catalog integrity</div>
+      </a>
+      <a class="product" href="#">
+        <div class="product-num"><span>03</span><span class="product-tag verify">Communications</span></div>
+        <h3 class="product-name">CIP</h3>
+        <p class="product-desc">Communications compliance. Scores communications surfaces across diagnostic channels.</p>
+        <div class="product-rules">9 diagnostic channels · scoring</div>
+      </a>
+      <a class="product" href="https://usemediready.com/" target="_blank" rel="noopener">
+        <div class="product-num"><span>04</span><span class="product-tag health">Healthcare</span></div>
+        <h3 class="product-name">MediReady</h3>
+        <p class="product-desc">Healthcare claim preparation. Prepares clean, compliant claims and denial corrections.</p>
+        <div class="product-rules">CARC / RARC · NPI · CPT</div>
+      </a>
+      <a class="product" href="#">
+        <div class="product-num"><span>05</span><span class="product-tag workflow">Accounting</span></div>
+        <h3 class="product-name">PerfectBook</h3>
+        <p class="product-desc">Accounting data quality. Validates and corrects ledger data for clean, audit-ready books.</p>
+        <div class="product-rules">SIE / BAS ledger · vouchers · VAT</div>
+      </a>
+      <a class="product" href="#">
+        <div class="product-num"><span>06</span><span class="product-tag workflow">Inspections</span></div>
+        <h3 class="product-name">Inspection</h3>
+        <p class="product-desc">Property &amp; field assessment validation. Turns raw inspection data into audit-ready reports.</p>
+        <div class="product-rules">Besiktning protocols · condition scale</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- 4 — PERFORMANCE METRICS -->
+<section class="section section-cream">
+  <div class="container">
+    <div class="section-eyebrow">— PERFORMANCE METRICS</div>
+    <h2 class="section-title">How performance is measured.</h2>
+    <p class="section-sub">NgineAgent reports its own telemetry, derived from real engine runs — not marketing numbers. The live engine exposes current stats; the dimensions that matter are below.</p>
+
+    <div class="metrics-grid">
+      <div class="metric">
+        <div class="m-key">Determinism</div>
+        <div class="m-headline">Same input → same score.</div>
+        <div class="m-desc">Every run is reproducible. Re-run a file and the corrections and score are identical — verifiable, not asserted.</div>
+      </div>
+      <div class="metric">
+        <div class="m-key">Latency</div>
+        <div class="m-headline">Raw to master in milliseconds.</div>
+        <div class="m-desc">A file is validated, corrected, and bounced in the time a console takes to scan a take. Live timing is shown in the engine.</div>
+      </div>
+      <div class="metric">
+        <div class="m-key">Coverage</div>
+        <div class="m-headline">Five domain presets, live.</div>
+        <div class="m-desc">Music, healthcare, communications, accounting, and inspection presets all run on the same engine build.</div>
+      </div>
+    </div>
+    <div class="btn-row">
+      <a href="https://engine.usesmpt.com/" target="_blank" rel="noopener" class="btn-secondary">See live stats in the engine →</a>
+    </div>
+  </div>
+</section>
+
+<!-- 5 — EVIDENCE CHAIN -->
+<section class="section">
+  <div class="container">
+    <div class="section-eyebrow">— EVIDENCE CHAIN</div>
+    <h2 class="section-title">Every correction, provable.</h2>
+    <p class="section-sub">The output is never just a cleaned file. Each run produces a linked chain — from the diagnostic report, through the correction worksheet, to the bounced master — so any change can be traced back to the rule that made it.</p>
+
+    <div class="evidence-flow">
+      <div class="evidence-node">
+        <div class="e-step">STEP 01</div>
+        <div class="e-name">Report</div>
+        <div class="e-desc">Diagnostic of every field checked, every issue found, scored against the active ruleset.</div>
+      </div>
+      <div class="evidence-node">
+        <div class="e-step">STEP 02</div>
+        <div class="e-name">Worksheet</div>
+        <div class="e-desc">Each correction recorded with its before, after, and the rule that triggered it.</div>
+      </div>
+      <div class="evidence-node">
+        <div class="e-step">STEP 03</div>
+        <div class="e-name">Corrected master</div>
+        <div class="e-desc">Procurement-ready output as CSV, XLSX, and a branded PDF — traceable to the worksheet.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6 — CONTACT / INQUIRY -->
+<section class="final-cta">
+  <div class="container">
+    <div class="final-cta-inner">
+      <h2>Run the engine against <span class="italic">your own data.</span></h2>
+      <p>For acquisition inquiries, the full data room, and a live walkthrough of NgineAgent on a file you bring — get in touch. Serious inquiries answered directly.</p>
+      <a href="/contact/" class="btn-cta-light">Open an inquiry →</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="brand">
+          <svg class="brand-mark" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="100" cy="100" r="78" fill="none" stroke="#1F2937" stroke-width="1" opacity="0.15"/>
+            <circle cx="100" cy="100" r="62" fill="none" stroke="#1F2937" stroke-width="1" opacity="0.12"/>
+            <polygon points="100,38 112,100 100,108 88,100" fill="#FF6B35"/>
+            <polygon points="100,162 112,100 100,92 88,100" fill="#1F2937"/>
+            <polygon points="38,100 100,88 108,100 100,112" fill="#1F2937" opacity="0.35"/>
+            <polygon points="162,100 100,88 92,100 100,112" fill="#1F2937" opacity="0.35"/>
+            <circle cx="100" cy="100" r="5" fill="#FAFAF7" stroke="#1F2937" stroke-width="1.5"/>
+            <circle cx="100" cy="100" r="1.5" fill="#FF6B35"/>
+          </svg>
+          <span class="brand-text">Northern Star <span class="accent">Systems</span></span>
+        </a>
+        <p>Northern Star Systems — NgineAgent, the deterministic validation engine. One engine, six products, five industries.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Products</h4>
+        <ul>
+          <li><a href="https://heyroya.se/" target="_blank" rel="noopener">HeyRoya ↗</a></li>
+          <li><a href="https://kataloghub.se/" target="_blank" rel="noopener">Kataloghub ↗</a></li>
+          <li><a href="#">CIP</a></li>
+          <li><a href="https://usemediready.com/" target="_blank" rel="noopener">MediReady ↗</a></li>
+          <li><a href="#">PerfectBook</a></li>
+          <li><a href="#">Inspection</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Platform</h4>
+        <ul>
+          <li><a href="/#engine">The Engine</a></li>
+          <li><a href="https://engine.usesmpt.com/" target="_blank" rel="noopener">Open the studio ↗</a></li>
+          <li><a href="/#how">How it works</a></li>
+          <li><a href="/api-docs/">API docs</a></li>
+          <li><a href="/security/">Security</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/acquirers/">For Acquirers</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 NORTHERN STAR SYSTEMS · ALL RIGHTS RESERVED</span>
+      <span>NGINEAGENT · DETERMINISTIC</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

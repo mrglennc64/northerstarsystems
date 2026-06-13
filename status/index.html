@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Status · Northern Star Systems</title>
-<meta name="description" content="Real-time operational status for every system in the Northern Star Systems suite. Uptime, incidents, and component health.">
+<title>Status · NgineAgent · Northern Star Systems</title>
+<meta name="description" content="Real-time operational status for the NgineAgent engine and the six products it powers. Uptime, incidents, and component health.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter+Tight:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -451,9 +451,10 @@ footer {
       <span class="brand-text">Northern Star <span class="accent">Systems</span></span>
     </a>
     <div class="nav-links">
-      <a href="/#products">Systems</a>
+      <a href="/#engine">The Engine</a>
+      <a href="/#products">Products</a>
       <a href="/#how">How it works</a>
-      <a href="/#pricing">Pricing</a>
+      <a href="/acquirers/">For Acquirers</a>
       <a href="mailto:hello@northernstarsystems.com" class="nav-cta">Book a demo →</a>
     </div>
   </div>
@@ -483,8 +484,8 @@ footer {
         <div class="value">0</div>
       </div>
       <div class="summary-cell">
-        <div class="label">Systems online</div>
-        <div class="value green">9 / 9</div>
+        <div class="label">Components online</div>
+        <div class="value green">7 / 7</div>
       </div>
     </div>
   </div>
@@ -493,60 +494,48 @@ footer {
 <section class="section">
   <div class="container">
     <div class="section-eyebrow">— COMPONENT STATUS</div>
-    <h2 class="section-title">Every system, <span class="italic">checked continuously.</span></h2>
-    <p class="section-sub">Each row shows the last 90 days of uptime. Tick = available; gap = degraded or incident window. Probes run every 60 seconds from three regions.</p>
+    <h2 class="section-title">The engine and every product, <span class="italic">checked continuously.</span></h2>
+    <p class="section-sub">The NgineAgent engine runs inside customer infrastructure — same input, same output, same score, no drift. Each row shows the last 90 days of uptime. Tick = available; gap = degraded or incident window. Probes run every 60 seconds from three regions.</p>
 
     <div class="system-list">
       <div class="system-row">
-        <div class="system-name"><span class="dot"></span>HeyRoya System</div>
+        <div class="system-name"><span class="dot"></span>NgineAgent engine</div>
         <div class="uptime-bar" aria-label="90-day uptime"></div>
         <div class="system-uptime">99.99%</div>
         <div class="system-status">Operational</div>
       </div>
       <div class="system-row">
-        <div class="system-name"><span class="dot"></span>Kataloghub System</div>
+        <div class="system-name"><span class="dot"></span>HeyRoya</div>
+        <div class="uptime-bar" aria-label="90-day uptime"></div>
+        <div class="system-uptime">99.99%</div>
+        <div class="system-status">Operational</div>
+      </div>
+      <div class="system-row">
+        <div class="system-name"><span class="dot"></span>Kataloghub</div>
         <div class="uptime-bar" aria-label="90-day uptime"></div>
         <div class="system-uptime">99.98%</div>
         <div class="system-status">Operational</div>
       </div>
       <div class="system-row">
-        <div class="system-name"><span class="dot"></span>TrapRoyalties</div>
+        <div class="system-name"><span class="dot"></span>CIP</div>
         <div class="uptime-bar" aria-label="90-day uptime"></div>
         <div class="system-uptime">99.99%</div>
         <div class="system-status">Operational</div>
       </div>
       <div class="system-row">
-        <div class="system-name"><span class="dot"></span>TrapRoyaltiesPro System</div>
+        <div class="system-name"><span class="dot"></span>MediReady</div>
         <div class="uptime-bar" aria-label="90-day uptime"></div>
-        <div class="system-uptime">99.99%</div>
+        <div class="system-uptime">99.98%</div>
         <div class="system-status">Operational</div>
       </div>
       <div class="system-row">
-        <div class="system-name"><span class="dot"></span>VerseIQ System</div>
-        <div class="uptime-bar" aria-label="90-day uptime"></div>
-        <div class="system-uptime">100.00%</div>
-        <div class="system-status">Operational</div>
-      </div>
-      <div class="system-row">
-        <div class="system-name"><span class="dot"></span>SMPT System</div>
-        <div class="uptime-bar" aria-label="90-day uptime"></div>
-        <div class="system-uptime">99.99%</div>
-        <div class="system-status">Operational</div>
-      </div>
-      <div class="system-row">
-        <div class="system-name"><span class="dot"></span>MediSMPT</div>
+        <div class="system-name"><span class="dot"></span>PerfectBook</div>
         <div class="uptime-bar" aria-label="90-day uptime"></div>
         <div class="system-uptime">99.97%</div>
         <div class="system-status">Operational</div>
       </div>
       <div class="system-row">
-        <div class="system-name"><span class="dot"></span>UseMediReady</div>
-        <div class="uptime-bar" aria-label="90-day uptime"></div>
-        <div class="system-uptime">99.98%</div>
-        <div class="system-status">Operational</div>
-      </div>
-      <div class="system-row">
-        <div class="system-name"><span class="dot"></span>Web Assessment System</div>
+        <div class="system-name"><span class="dot"></span>Inspection</div>
         <div class="uptime-bar" aria-label="90-day uptime"></div>
         <div class="system-uptime">100.00%</div>
         <div class="system-status">Operational</div>
@@ -594,25 +583,24 @@ footer {
           </svg>
           <span class="brand-text">Northern Star <span class="accent">Systems</span></span>
         </a>
-        <p>Northern Star Systems - The automation layer for metadata and rights chains.</p>
+        <p>Northern Star Systems — NgineAgent, the deterministic validation engine. One engine, six products, five industries.</p>
       </div>
       <div class="footer-col">
         <h4>Products</h4>
         <ul>
-          <li><a href="https://heyroya.se/" target="_blank" rel="noopener">HeyRoya System ↗</a></li>
-          <li><a href="https://kataloghub.se/" target="_blank" rel="noopener">Kataloghub System ↗</a></li>
-          <li><a href="https://traproyalties.com/" target="_blank" rel="noopener">TrapRoyalties ↗</a></li>
-          <li><a href="https://traproyaltiespro.com/" target="_blank" rel="noopener">TrapRoyaltiesPro System ↗</a></li>
-          <li><a href="https://useverseiq.com/" target="_blank" rel="noopener">VerseIQ System ↗</a></li>
-          <li><a href="https://usesmpt.com/landing.html" target="_blank" rel="noopener">SMPT System ↗</a></li>
-          <li><a href="https://medi.usesmpt.com/" target="_blank" rel="noopener">MediSMPT ↗</a></li>
-          <li><a href="https://usemediready.com/" target="_blank" rel="noopener">UseMediReady ↗</a></li>
-          <li><a href="https://usewebcheck.com/" target="_blank" rel="noopener">Web Assessment System ↗</a></li>
+          <li><a href="https://heyroya.se/" target="_blank" rel="noopener">HeyRoya ↗</a></li>
+          <li><a href="https://kataloghub.se/" target="_blank" rel="noopener">Kataloghub ↗</a></li>
+          <li><a href="#">CIP</a></li>
+          <li><a href="https://usemediready.com/" target="_blank" rel="noopener">MediReady ↗</a></li>
+          <li><a href="#">PerfectBook</a></li>
+          <li><a href="#">Inspection</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Platform</h4>
         <ul>
+          <li><a href="/#engine">The Engine</a></li>
+          <li><a href="https://engine.usesmpt.com/" target="_blank" rel="noopener">Open the studio ↗</a></li>
           <li><a href="/#how">How it works</a></li>
           <li><a href="/#pricing">Pricing</a></li>
           <li><a href="/api-docs/">API docs</a></li>
@@ -623,15 +611,15 @@ footer {
       <div class="footer-col">
         <h4>Company</h4>
         <ul>
+          <li><a href="/acquirers/">For Acquirers</a></li>
           <li><a href="/about/">About</a></li>
-          <li><a href="/#">Careers</a></li>
           <li><a href="/contact/">Contact</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
       <span>© 2026 NORTHERN STAR SYSTEMS · ALL RIGHTS RESERVED</span>
-      <span>METADATA · VALIDATED</span>
+      <span>NGINEAGENT · DETERMINISTIC</span>
     </div>
   </div>
 </footer>

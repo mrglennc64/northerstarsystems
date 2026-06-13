@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>API · Northern Star Systems</title>
-<meta name="description" content="The Northern Star Systems API. A single interface for metadata correction, rights-chain validation, and workflow automation. Currently in private access for partners.">
+<title>API · NgineAgent · Northern Star Systems</title>
+<meta name="description" content="The NgineAgent API. A single interface to the deterministic validation and correction engine behind six products. Validate, correct, and export a clean master with full evidence chain. Currently in private access for partners.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter+Tight:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -473,9 +473,10 @@ footer {
       <span class="brand-text">Northern Star <span class="accent">Systems</span></span>
     </a>
     <div class="nav-links">
-      <a href="/#products">Systems</a>
+      <a href="/#engine">The Engine</a>
+      <a href="/#products">Products</a>
       <a href="/#how">How it works</a>
-      <a href="/#pricing">Pricing</a>
+      <a href="/acquirers/">For Acquirers</a>
       <a href="mailto:hello@northernstarsystems.com" class="nav-cta">Request access →</a>
     </div>
   </div>
@@ -485,10 +486,10 @@ footer {
   <div class="container">
     <div class="page-eyebrow">DEVELOPER · API</div>
     <h1>
-      The Northern Star API.<br>
-      <span class="italic">One interface across</span> <span class="accent">nine systems.</span>
+      The NgineAgent API.<br>
+      <span class="italic">One interface to</span> <span class="accent">the engine.</span>
     </h1>
-    <p>A single API for metadata correction, rights-chain validation, and workflow automation across the Northern Star Systems suite. Currently in private access for partners and enterprise customers.</p>
+    <p>A single API to NgineAgent — the deterministic validation and correction engine behind all six products. Validate every field against industry rulesets, apply deterministic corrections, and export a clean master with a full evidence chain. Currently in private access for partners and enterprise customers.</p>
     <div class="page-hero-cta">
       <a href="mailto:hello@northernstarsystems.com?subject=API%20access%20request" class="btn-primary">Request access →</a>
       <a href="#endpoints" class="btn-secondary">See endpoint reference</a>
@@ -499,8 +500,8 @@ footer {
 <section class="section">
   <div class="container">
     <div class="section-eyebrow">— OVERVIEW</div>
-    <h2 class="section-title">One API. <span class="italic">Every system in the suite.</span></h2>
-    <p class="section-sub">Authentication is identical across endpoints. Payloads are normalized to a single schema. Rate limits scale with your plan. Calls are made over HTTPS to <code style="font-family:var(--mono); background:var(--cream-2); padding:2px 6px; border-radius:3px;">api.northernstarsystems.com</code>.</p>
+    <h2 class="section-title">One API. <span class="italic">One engine, six products.</span></h2>
+    <p class="section-sub">The same engine drives every product, so the interface is identical across them. Same input produces the same output and the same score — no drift. The engine runs inside your infrastructure with no external calls and no data retention. Calls are made over HTTPS to <code style="font-family:var(--mono); background:var(--cream-2); padding:2px 6px; border-radius:3px;">api.northernstarsystems.com</code>.</p>
 
     <div class="info-grid">
       <div class="info-card">
@@ -508,12 +509,12 @@ footer {
         <p>All endpoints sit under <code style="font-family:var(--mono);">/v1/</code>. Breaking changes ship as <code style="font-family:var(--mono);">/v2/</code> with at least 12 months overlap.</p>
       </div>
       <div class="info-card">
-        <h4>JSON only</h4>
-        <p>Requests and responses are JSON. CSV/DDEX inputs are accepted via the <code style="font-family:var(--mono);">/v1/ingest</code> endpoint and normalized server-side.</p>
+        <h4>Raw in, clean out</h4>
+        <p>Requests and responses are JSON. Raw CSV/XLSX inputs are accepted via the <code style="font-family:var(--mono);">/v1/ingest</code> endpoint and read server-side by the engine.</p>
       </div>
       <div class="info-card">
-        <h4>Idempotent writes</h4>
-        <p>POSTs accept an <code style="font-family:var(--mono);">Idempotency-Key</code> header. Same key returns the same result for 24 hours.</p>
+        <h4>Deterministic</h4>
+        <p>The engine is stateless. Same input returns the same output and the same score — no drift. POSTs also accept an <code style="font-family:var(--mono);">Idempotency-Key</code> header.</p>
       </div>
     </div>
   </div>
@@ -522,20 +523,20 @@ footer {
 <section class="section section-cream">
   <div class="container">
     <div class="section-eyebrow">— AUTHENTICATION</div>
-    <h2 class="section-title">Bearer tokens, <span class="italic">scoped per system and environment.</span></h2>
-    <p class="section-sub">Tokens are issued per system (HeyRoya, Kataloghub, VerseIQ, etc.) and per environment (sandbox or production). Rotate at any time from the dashboard or by emailing us.</p>
+    <h2 class="section-title">Bearer tokens, <span class="italic">scoped per product and environment.</span></h2>
+    <p class="section-sub">Tokens are issued per product (HeyRoya, Kataloghub, CIP, MediReady, PerfectBook, Inspection) and per environment (sandbox or production). Rotate at any time from the dashboard or by emailing us.</p>
 
     <div class="code-block">
 <span class="comment"># Every request carries a bearer token in the Authorization header.</span>
-curl https://api.northernstarsystems.com/v1/corrections \
+curl https://api.northernstarsystems.com/v1/validate \
   -H <span class="str">"Authorization: Bearer ns_live_•••••••••••••••••"</span> \
   -H <span class="str">"Content-Type: application/json"</span> \
   -H <span class="str">"Idempotency-Key: 8f3c-…"</span> \
-  -d <span class="str">'{ "isrc": "USRC1-23-04571", "title": "Northbound" }'</span>
+  -d <span class="str">'{ "product": "kataloghub", "ruleset": "v1", "job_id": "job_a91f…" }'</span>
 </div>
 
     <p style="font-size: 14px; color: var(--ink-2); font-weight: 300; max-width: 640px;">
-      <strong style="font-weight: 500; color: var(--ink);">Sandbox tokens</strong> are prefixed <code style="font-family:var(--mono);">ns_test_</code>, production tokens <code style="font-family:var(--mono);">ns_live_</code>. Sandbox writes never touch live catalog state. Token leaks should be reported to <a href="mailto:security@northernstarsystems.com" style="color:var(--orange);">security@northernstarsystems.com</a>.
+      <strong style="font-weight: 500; color: var(--ink);">Sandbox tokens</strong> are prefixed <code style="font-family:var(--mono);">ns_test_</code>, production tokens <code style="font-family:var(--mono);">ns_live_</code>. Sandbox runs never touch live data. Token leaks should be reported to <a href="mailto:security@northernstarsystems.com" style="color:var(--orange);">security@northernstarsystems.com</a>.
     </p>
   </div>
 </section>
@@ -544,44 +545,44 @@ curl https://api.northernstarsystems.com/v1/corrections \
   <div class="container">
     <div class="section-eyebrow">— ENDPOINTS</div>
     <h2 class="section-title">Endpoint reference.</h2>
-    <p class="section-sub">Five endpoint families cover correction, validation, queries, reports, and webhooks. Full reference docs ship with sandbox access.</p>
+    <p class="section-sub">The engine's operations map to endpoint families: validate, correct, evidence, ingest, and webhooks. Full reference docs ship with sandbox access.</p>
 
     <div class="endpoint-grid">
       <div class="endpoint">
         <span class="endpoint-tag">Coming soon</span>
-        <div class="endpoint-method"><span class="verb">POST</span>/v1/corrections</div>
-        <h3>Corrections</h3>
-        <p>Submit a metadata payload. Receive a corrected version with a per-field diff and confidence score. High-confidence corrections apply automatically; edge cases return a <code style="font-family:var(--mono);">review_required</code> flag.</p>
-      </div>
-      <div class="endpoint">
-        <span class="endpoint-tag">Coming soon</span>
         <div class="endpoint-method"><span class="verb">POST</span>/v1/validate</div>
-        <h3>Validation</h3>
-        <p>Check metadata against ISRC, ISWC, IPI, and client-specific rulesets without mutating it. Returns a structured list of pass/fail rules with reasoning.</p>
+        <h3>Validate</h3>
+        <p>Check every field against the industry rulesets for the target product without mutating anything. Returns a structured list of pass/fail rules with reasoning. Same input returns the same result.</p>
       </div>
       <div class="endpoint">
         <span class="endpoint-tag">Coming soon</span>
-        <div class="endpoint-method"><span class="verb">GET</span>/v1/rights/*</div>
-        <h3>Rights-chain queries</h3>
-        <p>Look up writers, splits, territories, and registration status by ISRC or ISWC. Joins authoritative registries with your catalog state.</p>
+        <div class="endpoint-method"><span class="verb">POST</span>/v1/corrections</div>
+        <h3>Correct</h3>
+        <p>Submit a raw payload. The engine applies deterministic corrections and returns a corrected version with a per-field diff. Edge cases the rulesets cannot resolve return a <code style="font-family:var(--mono);">review_required</code> flag.</p>
       </div>
       <div class="endpoint">
         <span class="endpoint-tag">Coming soon</span>
-        <div class="endpoint-method"><span class="verb">POST</span>/v1/reports</div>
-        <h3>Reports</h3>
-        <p>Build a report from validated catalog data — leakage analysis, territory coverage, registration gaps. Sync (small) or async (large) execution.</p>
+        <div class="endpoint-method"><span class="verb">GET</span>/v1/evidence/*</div>
+        <h3>Evidence chain</h3>
+        <p>Retrieve the full evidence chain for a run by job ID — the report, the worksheet, and the corrected master. Every correction traces back to the rule that produced it.</p>
+      </div>
+      <div class="endpoint">
+        <span class="endpoint-tag">Coming soon</span>
+        <div class="endpoint-method"><span class="verb">POST</span>/v1/export</div>
+        <h3>Export master</h3>
+        <p>Export the clean master from a completed run as corrected CSV, XLSX, or branded PDF. Deterministic output: same input, same master, same score.</p>
       </div>
       <div class="endpoint">
         <span class="endpoint-tag">Coming soon</span>
         <div class="endpoint-method"><span class="verb">POST</span>/v1/webhooks</div>
         <h3>Webhooks</h3>
-        <p>Subscribe to correction, validation, and report events. Signed payloads (<code style="font-family:var(--mono);">X-NSS-Signature</code>), exponential backoff retry, 30-day event replay.</p>
+        <p>Subscribe to validate, correct, and export events. Signed payloads (<code style="font-family:var(--mono);">X-NSS-Signature</code>), exponential backoff retry, 30-day event replay.</p>
       </div>
       <div class="endpoint">
         <span class="endpoint-tag">Coming soon</span>
         <div class="endpoint-method"><span class="verb">POST</span>/v1/ingest</div>
         <h3>Ingest</h3>
-        <p>Stream large payloads (CSV, DDEX feeds, DSP exports) into the pipeline. Async by default with a job ID for polling or webhook delivery.</p>
+        <p>Stream raw CSV/XLSX files into the engine. Async by default with a job ID for polling or webhook delivery. The engine runs in your infrastructure — no external calls, no data retention.</p>
       </div>
     </div>
   </div>
@@ -634,8 +635,8 @@ curl https://api.northernstarsystems.com/v1/corrections \
 <section class="final-cta">
   <div class="container">
     <div class="final-cta-inner">
-      <h2>Building on Northern Star? <span class="italic">Let's talk.</span></h2>
-      <p>Sandbox access, integration support, and a live walkthrough of the endpoint families that match your workflow. We respond within one business day.</p>
+      <h2>Building on the engine? <span class="italic">Let's talk.</span></h2>
+      <p>Sandbox access, integration support, and a live walkthrough of the validate, correct, and evidence operations that match your product. We respond within one business day.</p>
       <a href="mailto:hello@northernstarsystems.com?subject=API%20access%20request" class="btn-cta-light">Request API access →</a>
     </div>
   </div>
@@ -658,25 +659,24 @@ curl https://api.northernstarsystems.com/v1/corrections \
           </svg>
           <span class="brand-text">Northern Star <span class="accent">Systems</span></span>
         </a>
-        <p>Northern Star Systems - The automation layer for metadata and rights chains.</p>
+        <p>Northern Star Systems — NgineAgent, the deterministic validation engine. One engine, six products, five industries.</p>
       </div>
       <div class="footer-col">
         <h4>Products</h4>
         <ul>
-          <li><a href="https://heyroya.se/" target="_blank" rel="noopener">HeyRoya System ↗</a></li>
-          <li><a href="https://kataloghub.se/" target="_blank" rel="noopener">Kataloghub System ↗</a></li>
-          <li><a href="https://traproyalties.com/" target="_blank" rel="noopener">TrapRoyalties ↗</a></li>
-          <li><a href="https://traproyaltiespro.com/" target="_blank" rel="noopener">TrapRoyaltiesPro System ↗</a></li>
-          <li><a href="https://useverseiq.com/" target="_blank" rel="noopener">VerseIQ System ↗</a></li>
-          <li><a href="https://usesmpt.com/landing.html" target="_blank" rel="noopener">SMPT System ↗</a></li>
-          <li><a href="https://medi.usesmpt.com/" target="_blank" rel="noopener">MediSMPT ↗</a></li>
-          <li><a href="https://usemediready.com/" target="_blank" rel="noopener">UseMediReady ↗</a></li>
-          <li><a href="https://usewebcheck.com/" target="_blank" rel="noopener">Web Assessment System ↗</a></li>
+          <li><a href="https://heyroya.se/" target="_blank" rel="noopener">HeyRoya ↗</a></li>
+          <li><a href="https://kataloghub.se/" target="_blank" rel="noopener">Kataloghub ↗</a></li>
+          <li><a href="#">CIP</a></li>
+          <li><a href="https://usemediready.com/" target="_blank" rel="noopener">MediReady ↗</a></li>
+          <li><a href="#">PerfectBook</a></li>
+          <li><a href="#">Inspection</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Platform</h4>
         <ul>
+          <li><a href="/#engine">The Engine</a></li>
+          <li><a href="https://engine.usesmpt.com/" target="_blank" rel="noopener">Open the studio ↗</a></li>
           <li><a href="/#how">How it works</a></li>
           <li><a href="/#pricing">Pricing</a></li>
           <li><a href="/api-docs/">API docs</a></li>
@@ -687,15 +687,15 @@ curl https://api.northernstarsystems.com/v1/corrections \
       <div class="footer-col">
         <h4>Company</h4>
         <ul>
+          <li><a href="/acquirers/">For Acquirers</a></li>
           <li><a href="/about/">About</a></li>
-          <li><a href="/#">Careers</a></li>
           <li><a href="/contact/">Contact</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
       <span>© 2026 NORTHERN STAR SYSTEMS · ALL RIGHTS RESERVED</span>
-      <span>METADATA · VALIDATED</span>
+      <span>NGINEAGENT · DETERMINISTIC</span>
     </div>
   </div>
 </footer>

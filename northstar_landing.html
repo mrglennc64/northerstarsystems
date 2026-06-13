@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Northern Star Systems — Metadata, Rights-Chain, and Workflow Automation</title>
-<meta name="description" content="Automated systems for metadata correction, validation, rights-chain intelligence, and workflow automation. One platform. Nine purpose-built systems.">
+<title>NgineAgent — The deterministic engine for clean, compliant, audit-ready data</title>
+<meta name="description" content="NgineAgent is a deterministic validation engine that turns raw data into clean, compliant, audit-ready output. One engine. Six vertical products. Five industries.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter+Tight:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -650,6 +650,46 @@ footer {
   letter-spacing: 1px;
 }
 
+/* ============ ENGINE ============ */
+.engine-claim {
+  font-family: var(--display);
+  font-size: clamp(22px, 2.6vw, 30px);
+  font-weight: 300;
+  line-height: 1.4;
+  letter-spacing: -0.5px;
+  max-width: 880px;
+  margin-bottom: 56px;
+  color: var(--ink);
+}
+.engine-claim em { font-style: italic; color: var(--orange); font-weight: 400; }
+.engine-specs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border-top: 1px solid var(--rule);
+  border-left: 1px solid var(--rule);
+}
+.engine-spec {
+  padding: 28px 28px 32px;
+  border-right: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  background: var(--cream);
+}
+.engine-spec .spec-key {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  color: var(--orange);
+  margin-bottom: 14px;
+  text-transform: uppercase;
+}
+.engine-spec .spec-val {
+  font-size: 15px;
+  color: var(--ink-2);
+  font-weight: 300;
+  line-height: 1.55;
+}
+
 /* ============ RESPONSIVE ============ */
 @media (max-width: 900px) {
   .hero { padding: 70px 0 60px; }
@@ -659,6 +699,7 @@ footer {
   .how-step { border-right: none; border-bottom: 1px solid var(--rule); padding: 28px 0 !important; }
   .benefits-grid { grid-template-columns: 1fr; gap: 40px; }
   .pricing-grid { grid-template-columns: 1fr 1fr; }
+  .engine-specs { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
   .nav-links { display: none; }
   .nav-links .nav-cta { display: inline-flex; }
@@ -718,9 +759,10 @@ footer {
       <span class="brand-text">Northern Star <span class="accent">Systems</span></span>
     </a>
     <div class="nav-links">
-      <a href="#products">Systems</a>
+      <a href="#engine">The Engine</a>
+      <a href="#products">Products</a>
       <a href="#how">How it works</a>
-      <a href="#pricing">Pricing</a>
+      <a href="/acquirers/">For Acquirers</a>
       <a href="#" class="nav-cta">Book a demo →</a>
     </div>
   </div>
@@ -731,18 +773,18 @@ footer {
   <div class="container">
     <div class="hero-grid">
       <div>
-        <div class="hero-eyebrow fade-in">METADATA  ·  VALIDATED</div>
+        <div class="hero-eyebrow fade-in">ONE ENGINE  ·  SIX PRODUCTS  ·  FIVE INDUSTRIES</div>
         <h1 class="fade-in d1">
-          The system of record<br>
-          for <span class="needle">metadata</span><br>
-          <span class="italic">and rights-chain integrity.</span>
+          <span class="needle">NgineAgent</span><br>
+          The deterministic engine for<br>
+          <span class="italic">clean, compliant, audit-ready data.</span>
         </h1>
         <p class="hero-sub fade-in d2">
-          Northern Star Systems builds automated tools that correct, validate, and optimize metadata and rights-chain information across music, media, and digital workflows - so creators, publishers, and businesses operate with clean, reliable data.
+          One engine. Six vertical products. Five industries. Bad data is expensive — NgineAgent makes it cheap to fix, automatically. It validates every field, applies deterministic corrections, and exports a clean master file with a full evidence chain.
         </p>
         <div class="hero-cta-row fade-in d3">
           <a href="#" class="btn-primary">Book a demo <span class="arr">→</span></a>
-          <a href="#products" class="btn-secondary">Explore the suite</a>
+          <a href="#engine" class="btn-secondary">See the engine</a>
         </div>
       </div>
 
@@ -805,145 +847,146 @@ footer {
 <div class="trust">
   <div class="container">
     <div class="trust-inner">
-      <span class="trust-label">TRUSTED BY TEAMS RUNNING NORTHERN STAR SYSTEMS FOR</span>
+      <span class="trust-label">ONE ENGINE, DEPLOYED ACROSS</span>
       <div class="trust-items">
-        <span class="trust-item">Metadata correction</span>
-        <span class="trust-item">Rights-chain validation</span>
-        <span class="trust-item">Workflow automation</span>
-        <span class="trust-item">Operational reliability</span>
+        <span class="trust-item">Music rights</span>
+        <span class="trust-item">Healthcare claims</span>
+        <span class="trust-item">Communications compliance</span>
+        <span class="trust-item">Accounting</span>
+        <span class="trust-item">Inspections</span>
       </div>
     </div>
   </div>
 </div>
 
-<!-- PRODUCTS -->
-<section class="section" id="products">
+<!-- THE ENGINE -->
+<section class="section" id="engine">
   <div class="container">
-    <div class="section-eyebrow">THE SYSTEMS SUITE</div>
-    <h2 class="section-title">One platform.<br><span class="italic">Nine purpose-built automation systems.</span></h2>
-    <p class="section-sub">Each system solves a specific metadata or workflow problem. Together, they form an integrated platform for automation, reporting, and rights-chain intelligence - across music, web, and business operations.</p>
+    <div class="section-eyebrow">— THE ENGINE</div>
+    <h2 class="section-title">The NgineAgent engine.<br><span class="italic">Stateless. Deterministic. Auditable.</span></h2>
+    <p class="section-sub">A stateless, deterministic engine that turns raw CSV/XLSX data into clean, compliant, audit-ready output in milliseconds — used across music rights, healthcare claims, communications compliance, accounting, and inspections.</p>
+
+    <p class="engine-claim">
+      NgineAgent is a deterministic validation engine — <em>not a database, not a workflow tool, not a model.</em> It runs inside your infrastructure, with no external calls and no data retention.
+    </p>
+
+    <div class="engine-specs">
+      <div class="engine-spec">
+        <div class="spec-key">Deterministic</div>
+        <div class="spec-val">Same input → same output → same score. No drift, no surprises — every run is reproducible.</div>
+      </div>
+      <div class="engine-spec">
+        <div class="spec-key">Stateless</div>
+        <div class="spec-val">Runs inside your infrastructure with no external calls and no data retention. Your data never leaves.</div>
+      </div>
+      <div class="engine-spec">
+        <div class="spec-key">Evidence chain</div>
+        <div class="spec-val">Every correction ships with a full chain: report → worksheet → corrected master (CSV · XLSX · branded PDF). Audit-ready by default.</div>
+      </div>
+    </div>
+
+    <div class="hero-cta-row" style="margin-top: 48px;">
+      <a href="https://engine.usesmpt.com/" target="_blank" rel="noopener" class="btn-primary">Open the studio <span class="arr">→</span></a>
+      <a href="https://engine.usesmpt.com/" target="_blank" rel="noopener" class="btn-secondary">Engine reference</a>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="section section-cream section-bordered" id="products">
+  <div class="container">
+    <div class="section-eyebrow">— PRODUCTS</div>
+    <h2 class="section-title">Six products.<br><span class="italic">Powered by one engine.</span></h2>
+    <p class="section-sub">NgineAgent runs inside six vertical products, each tuned to a single industry's rules. Same engine, same evidence chain — different domain.</p>
 
     <div class="product-grid">
       <a class="product" href="https://heyroya.se/" target="_blank" rel="noopener">
         <div class="product-num">
           <span>01</span>
-          <span class="product-tag music">Music</span>
+          <span class="product-tag music">Music rights</span>
         </div>
-        <h3 class="product-name">HeyRoya System</h3>
-        <p class="product-desc">Metadata correction engine with automated pipelines. Catches errors before they become revenue loss.</p>
+        <h3 class="product-name">HeyRoya</h3>
+        <p class="product-desc">Music rights validation. Catches metadata and rights-chain errors before they turn into lost royalties.</p>
         <div class="product-arrow">↗</div>
       </a>
 
       <a class="product" href="https://kataloghub.se/" target="_blank" rel="noopener">
         <div class="product-num">
           <span>02</span>
-          <span class="product-tag music">Music</span>
+          <span class="product-tag music">Catalog</span>
         </div>
-        <h3 class="product-name">Kataloghub System</h3>
-        <p class="product-desc">Metadata validation SaaS with rulesets and reporting. Validate catalog data before ingestion.</p>
+        <h3 class="product-name">Kataloghub</h3>
+        <p class="product-desc">Catalog correction. Validates and cleans catalog data against industry rulesets before ingestion.</p>
         <div class="product-arrow">↗</div>
       </a>
 
-      <a class="product" href="https://traproyalties.com/" target="_blank" rel="noopener">
+      <a class="product" href="#">
         <div class="product-num">
           <span>03</span>
-          <span class="product-tag music">Royalties · Artist</span>
+          <span class="product-tag verify">Communications</span>
         </div>
-        <h3 class="product-name">TrapRoyalties</h3>
-        <p class="product-desc">See your losses. A revenue diagnosis for artists — what you're losing, where, and why. Built for creators who want answers, not spreadsheets.</p>
-        <div class="product-arrow">↗</div>
-      </a>
-
-      <a class="product" href="https://traproyaltiespro.com/" target="_blank" rel="noopener">
-        <div class="product-num">
-          <span>04</span>
-          <span class="product-tag music">Royalties · Pro</span>
-        </div>
-        <h3 class="product-name">TrapRoyaltiesPro System</h3>
-        <p class="product-desc">Royalty leakage detection for labels and publishers. ISRC/ISWC mismatch logic surfaces the money slipping through territory and registry gaps.</p>
-        <div class="product-arrow">↗</div>
-      </a>
-
-      <a class="product" href="https://useverseiq.com/" target="_blank" rel="noopener">
-        <div class="product-num">
-          <span>05</span>
-          <span class="product-tag music">Analytics</span>
-        </div>
-        <h3 class="product-name">VerseIQ System</h3>
-        <p class="product-desc">Territory and stats analysis for labels and creators. Clean, actionable insights from messy industry data.</p>
-        <div class="product-arrow">↗</div>
-      </a>
-
-      <a class="product" href="https://usesmpt.com/landing.html" target="_blank" rel="noopener">
-        <div class="product-num">
-          <span>06</span>
-          <span class="product-tag verify">Verification</span>
-        </div>
-        <h3 class="product-name">SMPT System</h3>
-        <p class="product-desc">A neutral verification layer that produces cryptographic evidence packages for catalogs, corrections, and registrations — without integrations or system access.</p>
-        <div class="product-arrow">↗</div>
-      </a>
-
-      <a class="product" href="https://medi.usesmpt.com/" target="_blank" rel="noopener">
-        <div class="product-num">
-          <span>07</span>
-          <span class="product-tag health">Healthcare</span>
-        </div>
-        <h3 class="product-name">MediSMPT</h3>
-        <p class="product-desc">One platform for outpatient coding and denial correction. The verification engine, applied to medical billing and revenue‑cycle workflows.</p>
-        <div class="product-arrow">↗</div>
+        <h3 class="product-name">CIP</h3>
+        <p class="product-desc">Communications compliance. Validates communications surfaces against regulatory and policy rulesets.</p>
       </a>
 
       <a class="product" href="https://usemediready.com/" target="_blank" rel="noopener">
         <div class="product-num">
-          <span>08</span>
+          <span>04</span>
           <span class="product-tag health">Healthcare</span>
         </div>
-        <h3 class="product-name">UseMediReady</h3>
-        <p class="product-desc">One platform for healthcare audits and compliance documentation. The same validation engine, applied to clinical operations.</p>
+        <h3 class="product-name">MediReady</h3>
+        <p class="product-desc">Healthcare claim preparation. Prepares clean, compliant claims and documentation for revenue-cycle workflows.</p>
         <div class="product-arrow">↗</div>
       </a>
 
-      <a class="product" href="https://usewebcheck.com/" target="_blank" rel="noopener">
+      <a class="product" href="#">
         <div class="product-num">
-          <span>09</span>
-          <span class="product-tag workflow">Web</span>
+          <span>05</span>
+          <span class="product-tag workflow">Accounting</span>
         </div>
-        <h3 class="product-name">Web Assessment System</h3>
-        <p class="product-desc">Automated website scoring and improvement suggestions. Audits your site against best‑practice rulesets.</p>
-        <div class="product-arrow">↗</div>
+        <h3 class="product-name">PerfectBook</h3>
+        <p class="product-desc">Accounting data quality. Validates and corrects ledger and transaction data for clean, audit-ready books.</p>
+      </a>
+
+      <a class="product" href="#">
+        <div class="product-num">
+          <span>06</span>
+          <span class="product-tag workflow">Inspections</span>
+        </div>
+        <h3 class="product-name">Inspection</h3>
+        <p class="product-desc">Property &amp; field assessment validation. Turns raw inspection data into clean, compliant, audit-ready reports.</p>
       </a>
     </div>
   </div>
 </section>
 
 <!-- HOW IT WORKS -->
-<section class="section section-cream section-bordered" id="how">
+<section class="section section-bordered" id="how">
   <div class="container">
     <div class="section-eyebrow">— METHODOLOGY</div>
-    <h2 class="section-title">How Northern Star Systems <span class="italic">corrects the record.</span></h2>
-    <p class="section-sub">Every system in the suite runs on the same four-stage validation pipeline. Metadata enters messy; it leaves trustworthy.</p>
+    <h2 class="section-title">How NgineAgent <span class="italic">corrects the record.</span></h2>
+    <p class="section-sub">NgineAgent validates every field, applies deterministic corrections, and exports a clean, compliant master file — with a full evidence chain. Same input → same output → same score. No drift. No surprises.</p>
 
     <div class="how-grid">
       <div class="how-step">
         <div class="how-num">/ 01 — INGEST</div>
-        <h3 class="how-title">Connect any source.</h3>
-        <p class="how-desc">CSVs, DDEX feeds, DSP exports, PRO statements, internal databases. We meet your data where it lives.</p>
+        <h3 class="how-title">Read raw data.</h3>
+        <p class="how-desc">Raw CSV/XLSX in. The engine runs inside your infrastructure — no external calls, no data retention.</p>
       </div>
       <div class="how-step">
         <div class="how-num">/ 02 — VALIDATE</div>
-        <h3 class="how-title">Run rulesets.</h3>
-        <p class="how-desc">Industry standards (ISRC, ISWC, IPI), client‑specific rules, and cross‑reference checks against authoritative registries.</p>
+        <h3 class="how-title">Check every field.</h3>
+        <p class="how-desc">Industry rulesets and cross-reference checks, applied deterministically. Same input always yields the same result.</p>
       </div>
       <div class="how-step">
         <div class="how-num">/ 03 — CORRECT</div>
         <h3 class="how-title">Fix automatically.</h3>
-        <p class="how-desc">High‑confidence corrections happen in the pipeline. Edge cases route to a human reviewer with full context.</p>
+        <p class="how-desc">Deterministic corrections export a clean, compliant master file in milliseconds. No model, no guesswork.</p>
       </div>
       <div class="how-step">
-        <div class="how-num">/ 04 — REPORT</div>
-        <h3 class="how-title">Audit the chain.</h3>
-        <p class="how-desc">Every correction logged, every change traceable. Compliance‑ready exports and live dashboards by default.</p>
+        <div class="how-num">/ 04 — EVIDENCE</div>
+        <h3 class="how-title">Prove the chain.</h3>
+        <p class="how-desc">Every run ships a full evidence chain: report → worksheet → corrected output. Audit-ready by default.</p>
       </div>
     </div>
   </div>
@@ -955,17 +998,17 @@ footer {
     <div class="benefits-grid">
       <div>
         <div class="section-eyebrow">— WHY IT MATTERS</div>
-        <h2 class="section-title">Bad metadata is <span class="italic">expensive.</span> We make it cheap to fix.</h2>
-        <p class="section-sub" style="margin-bottom: 0;">Industry estimates put unmatched royalties in the billions. The fix isn't more humans — it's better systems running 24/7 against the registries that already hold the truth.</p>
+        <h2 class="section-title">Bad data is <span class="italic">expensive.</span> NgineAgent makes it cheap to fix.</h2>
+        <p class="section-sub" style="margin-bottom: 0;">The fix isn't more humans — it's one deterministic engine running against the rules that already hold the truth, the same way every time, with the evidence to prove it.</p>
       </div>
       <ul class="benefits-list">
-        <li><span class="num">01</span><span class="txt">Fix broken metadata <em>before</em> it causes revenue loss</span></li>
-        <li><span class="num">02</span><span class="txt">Validate catalog data <em>before</em> ingestion</span></li>
-        <li><span class="num">03</span><span class="txt">Detect royalty mismatches across territories</span></li>
-        <li><span class="num">04</span><span class="txt">Automate publisher workflows end‑to‑end</span></li>
-        <li><span class="num">05</span><span class="txt">Give creators <em>clean, actionable</em> insights</span></li>
-        <li><span class="num">06</span><span class="txt">Reduce manual admin work</span></li>
-        <li><span class="num">07</span><span class="txt">Improve catalog integrity and reporting accuracy</span></li>
+        <li><span class="num">01</span><span class="txt">Validate every field <em>before</em> bad data causes loss</span></li>
+        <li><span class="num">02</span><span class="txt">Apply <em>deterministic</em> corrections — same input, same output</span></li>
+        <li><span class="num">03</span><span class="txt">Export a clean, compliant master file in <em>milliseconds</em></span></li>
+        <li><span class="num">04</span><span class="txt">Ship a full evidence chain with every run</span></li>
+        <li><span class="num">05</span><span class="txt">Run inside your own infrastructure — <em>no data retention</em></span></li>
+        <li><span class="num">06</span><span class="txt">One engine across five industries</span></li>
+        <li><span class="num">07</span><span class="txt">No drift, no surprises, no black-box model</span></li>
       </ul>
     </div>
   </div>
@@ -976,25 +1019,25 @@ footer {
   <div class="container">
     <div class="section-eyebrow">— PRICING</div>
     <h2 class="section-title">Pay for what you fix.<br><span class="italic">Scale when you need to.</span></h2>
-    <p class="section-sub">Four ways to engage. Most teams start with a per‑work plan and move to subscriptions as volume grows.</p>
+    <p class="section-sub">Four ways to engage. Most teams start with a per‑run plan and move to subscriptions as volume grows.</p>
 
     <div class="pricing-grid">
       <div class="price-card">
-        <h3 class="price-name">Per‑work</h3>
-        <p class="price-desc">Pay only for the corrections you need. Best for catalogs under 10,000 works.</p>
+        <h3 class="price-name">Per‑run</h3>
+        <p class="price-desc">Pay only for the runs you need. Best for teams validating data on an occasional basis.</p>
         <span class="price-value">Talk to us</span>
         <span class="price-unit">USAGE‑BASED</span>
       </div>
       <div class="price-card featured">
         <span class="price-badge">Most popular</span>
         <h3 class="price-name">SaaS</h3>
-        <p class="price-desc">Unlimited validation and correction. Monthly or annual. All systems included.</p>
+        <p class="price-desc">Unlimited validation and correction. Monthly or annual. All six products included.</p>
         <span class="price-value">Talk to us</span>
         <span class="price-unit">MONTHLY · ANNUAL</span>
       </div>
       <div class="price-card">
-        <h3 class="price-name">Module license</h3>
-        <p class="price-desc">License individual automation modules to integrate inside your own platform.</p>
+        <h3 class="price-name">Engine license</h3>
+        <p class="price-desc">License the NgineAgent engine to run inside your own infrastructure and products.</p>
         <span class="price-value">Custom</span>
         <span class="price-unit">ANNUAL</span>
       </div>
@@ -1013,7 +1056,7 @@ footer {
   <div class="container">
     <div class="final-cta-inner">
       <h2>Set your <span class="italic">true north.</span><br>The rest follows.</h2>
-      <p>A 30‑minute demo against your own catalog. We'll show you what's broken, what we'd fix automatically, and what it would cost.</p>
+      <p>A 30‑minute demo against your own data. We'll run NgineAgent live, show you what's broken, what it fixes automatically, and the evidence chain it produces.</p>
       <a href="#" class="btn-cta-light">Book a demo →</a>
     </div>
   </div>
@@ -1037,25 +1080,24 @@ footer {
           </svg>
           <span class="brand-text">Northern Star <span class="accent">Systems</span></span>
         </a>
-        <p>Northern Star Systems - The automation layer for metadata and rights chains.</p>
+        <p>Northern Star Systems — NgineAgent, the deterministic validation engine. One engine, six products, five industries.</p>
       </div>
       <div class="footer-col">
         <h4>Products</h4>
         <ul>
-          <li><a href="https://heyroya.se/" target="_blank" rel="noopener">HeyRoya System ↗</a></li>
-          <li><a href="https://kataloghub.se/" target="_blank" rel="noopener">Kataloghub System ↗</a></li>
-          <li><a href="https://traproyalties.com/" target="_blank" rel="noopener">TrapRoyalties ↗</a></li>
-          <li><a href="https://traproyaltiespro.com/" target="_blank" rel="noopener">TrapRoyaltiesPro System ↗</a></li>
-          <li><a href="https://useverseiq.com/" target="_blank" rel="noopener">VerseIQ System ↗</a></li>
-          <li><a href="https://usesmpt.com/landing.html" target="_blank" rel="noopener">SMPT System ↗</a></li>
-          <li><a href="https://medi.usesmpt.com/" target="_blank" rel="noopener">MediSMPT ↗</a></li>
-          <li><a href="https://usemediready.com/" target="_blank" rel="noopener">UseMediReady ↗</a></li>
-          <li><a href="https://usewebcheck.com/" target="_blank" rel="noopener">Web Assessment System ↗</a></li>
+          <li><a href="https://heyroya.se/" target="_blank" rel="noopener">HeyRoya ↗</a></li>
+          <li><a href="https://kataloghub.se/" target="_blank" rel="noopener">Kataloghub ↗</a></li>
+          <li><a href="#">CIP</a></li>
+          <li><a href="https://usemediready.com/" target="_blank" rel="noopener">MediReady ↗</a></li>
+          <li><a href="#">PerfectBook</a></li>
+          <li><a href="#">Inspection</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Platform</h4>
         <ul>
+          <li><a href="#engine">The Engine</a></li>
+          <li><a href="https://engine.usesmpt.com/" target="_blank" rel="noopener">Open the studio ↗</a></li>
           <li><a href="#how">How it works</a></li>
           <li><a href="#pricing">Pricing</a></li>
           <li><a href="/api-docs/">API docs</a></li>
@@ -1066,15 +1108,15 @@ footer {
       <div class="footer-col">
         <h4>Company</h4>
         <ul>
+          <li><a href="/acquirers/">For Acquirers</a></li>
           <li><a href="/about/">About</a></li>
-          <li><a href="#">Careers</a></li>
           <li><a href="/contact/">Contact</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
       <span>© 2026 NORTHERN STAR SYSTEMS · ALL RIGHTS RESERVED</span>
-      <span>METADATA · VALIDATED</span>
+      <span>NGINEAGENT · DETERMINISTIC</span>
     </div>
   </div>
 </footer>
