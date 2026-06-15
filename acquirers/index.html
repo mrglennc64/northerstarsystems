@@ -7,23 +7,23 @@
 <meta name="description" content="NgineAgent is a deterministic validation engine powering ten products across six industries. The acquisition overview: engine reference, product summaries, performance, and evidence chain.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter+Tight:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;450;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root {
-  --cream: #FAFAF7;
-  --cream-2: #F2F1EC;
-  --ink: #1F2937;
-  --ink-2: #4A5563;
-  --ink-3: #8B92A0;
-  --rule: rgba(31, 40, 50, 0.12);
-  --rule-2: rgba(31, 40, 50, 0.22);
-  --orange: #FF6B35;
-  --green: #0F6E56;
-  --green-bg: #E8F2EE;
-  --red: #B23A48;
-  --display: 'Fraunces', 'Times New Roman', serif;
-  --sans: 'Inter Tight', -apple-system, BlinkMacSystemFont, sans-serif;
-  --mono: 'JetBrains Mono', 'Courier New', monospace;
+  --cream: #F4EEE4;
+  --cream-2: #ECE4D6;
+  --ink: #23221F;
+  --ink-2: #5A574F;
+  --ink-3: #908B7E;
+  --rule: rgba(35, 34, 31, 0.12);
+  --rule-2: rgba(35, 34, 31, 0.22);
+  --orange: #5A7D55;
+  --green: #4F6B57;
+  --green-bg: #E6EADF;
+  --red: #9E5B4E;
+  --display: 'Space Grotesk', system-ui, sans-serif;
+  --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --mono: 'IBM Plex Mono', 'Courier New', monospace;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -530,6 +530,28 @@ footer {
   .product-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
 }
+/* ====== SCREENSHOT LOOK: bright pastel gradient + dark cards ====== */
+body{background:radial-gradient(55% 75% at 8% 12%, #C9E6B4 0%, transparent 55%),radial-gradient(60% 80% at 94% 36%, #F6C7DA 0%, transparent 55%),radial-gradient(55% 70% at 72% 98%, #CDE7BC 0%, transparent 55%),linear-gradient(120deg, #D8ECC6 0%, #F8E8CD 47%, #F7D3D9 100%);background-attachment:fixed;color:#2B2A28}
+.statusbar{background:transparent;border-bottom:none;color:#6B6A63}.statusbar-right{color:#8A897F}
+nav{background:rgba(255,255,255,.30);border-bottom:1px solid rgba(43,42,40,.10);backdrop-filter:blur(8px)}
+.nav-links a{color:#3C4A38}.nav-links a:hover{color:#2B2A28}.nav-cta{background:#2B2A28;color:#F4EFE6}.nav-cta:hover{background:#000 !important}
+.page-hero,.status-hero,.contact-hero{background:#2B2A28;border-radius:26px;margin:16px auto 40px;max-width:1180px;padding:clamp(40px,6vw,86px) clamp(28px,4vw,64px);box-shadow:0 34px 80px -44px rgba(43,42,40,.65)}
+.page-eyebrow{color:#9FD8A4}
+.page-hero h1,.status-hero h1,.contact-hero h1,.status-banner h1{color:#F4EFE6}
+.page-hero h1 .italic,.contact-hero h1 .italic{color:#F4A6BD;font-style:normal}.page-hero h1 .accent,.contact-hero h1 .accent{color:#9FD8A4;font-style:normal}
+.status-banner{background:transparent;border:none;padding:0;box-shadow:none}.status-banner p{color:rgba(244,239,230,.72)}
+.section{background:transparent;border-top:none}.section-eyebrow{color:#3E8F57}.section-title{color:#262421}.section-title .italic{color:#C76A86;font-style:normal}.section-sub{color:#454339}
+.section-cream{background:rgba(255,255,255,.58);border:1px solid rgba(255,255,255,.7);border-radius:26px;max-width:1180px;margin:8px auto;backdrop-filter:blur(5px)}
+.capability,.info-card,.endpoint,.compliance-card,.route-card,.summary-cell,.sla-cell,.metric,.leadership-card,.origin-block{background:rgba(255,255,255,.74);border:1px solid rgba(255,255,255,.85);border-radius:16px;box-shadow:0 16px 38px -30px rgba(43,42,40,.45)}
+.capability .num,.philosophy-list .num,.endpoint-method,.metric .num{color:#3E8F57}
+.philosophy-list li{border-color:rgba(43,42,40,.12)}.philosophy-list .txt em{color:#C76A86;font-style:normal;font-weight:600}
+.final-cta{background:#2B2A28;border-radius:26px;max-width:1180px;margin:24px auto}.final-cta h2 .italic{color:#9FD8A4;font-style:normal}
+.btn-cta-light{background:#F4EFE6;color:#2B2A28}.btn-cta-light:hover{background:#fff}
+footer{background:transparent;border-top:1px solid rgba(43,42,40,.12)}.footer-col a:hover{color:#3E8F57}
+/* prose blocks: clean editorial text, no card/box */
+.origin-block{background:transparent !important;border:none !important;box-shadow:none !important;border-radius:0 !important;padding:0 !important;backdrop-filter:none !important;max-width:820px}
+.origin-block p{font-size:17px;line-height:1.7;color:#3a382f;margin-bottom:14px}
+.origin-block em{font-style:italic;color:#C76A86;font-weight:500}
 </style>
 </head>
 <body>
@@ -552,12 +574,12 @@ footer {
       <svg class="brand-mark" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <circle cx="100" cy="100" r="78" fill="none" stroke="#1F2937" stroke-width="1" opacity="0.15"/>
         <circle cx="100" cy="100" r="62" fill="none" stroke="#1F2937" stroke-width="1" opacity="0.12"/>
-        <polygon points="100,38 112,100 100,108 88,100" fill="#FF6B35"/>
+        <polygon points="100,38 112,100 100,108 88,100" fill="#5A7D55"/>
         <polygon points="100,162 112,100 100,92 88,100" fill="#1F2937"/>
         <polygon points="38,100 100,88 108,100 100,112" fill="#1F2937" opacity="0.35"/>
         <polygon points="162,100 100,88 92,100 100,112" fill="#1F2937" opacity="0.35"/>
         <circle cx="100" cy="100" r="5" fill="#FAFAF7" stroke="#1F2937" stroke-width="1.5"/>
-        <circle cx="100" cy="100" r="1.5" fill="#FF6B35"/>
+        <circle cx="100" cy="100" r="1.5" fill="#5A7D55"/>
       </svg>
       <span class="brand-text">Northern Star <span class="accent">Systems</span></span>
     </a>
@@ -566,167 +588,84 @@ footer {
       <a href="/#products">Products</a>
       <a href="/#how">How it works</a>
       <a href="/acquirers/" class="current">For Acquirers</a>
-      <a href="/contact/" class="nav-cta">Inquire →</a>
     </div>
   </div>
 </nav>
 
 <section class="page-hero">
   <div class="container">
-    <div class="page-eyebrow">FOR ACQUIRERS · NGINEAGENT</div>
+    <div class="page-eyebrow">ASSET ACQUISITION</div>
     <h1>
-      One <span class="accent">deterministic engine.</span> Ten products. <span class="italic">Six industries.</span>
+      NgineAgent — a <span class="accent">deterministic validation engine.</span>
     </h1>
-    <p>
-      NgineAgent is the asset: a stateless, deterministic validation and correction engine, already deployed inside ten products across six industries. This page is the acquisition overview — engine, products, performance, and evidence — without the data room.
-    </p>
+    <p style="font-family:var(--mono);font-size:13px;letter-spacing:.05em;color:rgba(244,239,230,.80)">€2–4M · Production-Ready · Multi-Vertical · Clean IP Transfer</p>
   </div>
 </section>
 
-<!-- 1 — CEO ENGINE OVERVIEW -->
+<!-- WHAT NGINEAGENT IS -->
 <section class="section">
   <div class="container">
-    <div class="section-eyebrow">— CEO ENGINE OVERVIEW</div>
-    <h2 class="section-title">What you're acquiring.</h2>
+    <div class="section-eyebrow">— WHAT NGINEAGENT IS</div>
+    <h2 class="section-title">Raw data in, <span class="italic">audit-ready output</span> in milliseconds.</h2>
     <div class="origin-block">
-      <p>Most data-quality tools are databases, workflow apps, or models. NgineAgent is none of those. It is a <em>generic validation and correction engine</em> — one codebase that reads raw CSV/XLSX, validates every field against industry rulesets, applies deterministic corrections, and bounces a clean, procurement-ready master with a full evidence chain.</p>
-      <p>The same engine drives ten products across six industries. New verticals are not rebuilds; they are <em>presets</em> — a ruleset and a domain configuration layered on top of the same deterministic core. That is the leverage in the asset: one engine to maintain, many markets to sell into.</p>
-      <p>It runs inside the customer's infrastructure, with no external calls and no data retention. Same input → same output → same score. No drift, no black box, nothing to explain to a regulator that the evidence chain doesn't already prove.</p>
+      <p>A deterministic validation engine that turns raw data into compliant, audit-ready output in milliseconds. Fully built, stateless, and deterministic — it accepts CSV/XLSX from any source, finds errors, applies rule-based corrections, and exports clean output.</p>
+      <p>Same input → same output → same score. No model drift, no randomness.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin-top:32px">
+      <div style="background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.85);border-radius:14px;padding:22px 24px;box-shadow:0 16px 38px -30px rgba(43,42,40,.45);font-size:15px;line-height:1.5;color:#3a382f">Fully built, stateless, deterministic</div>
+      <div style="background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.85);border-radius:14px;padding:22px 24px;box-shadow:0 16px 38px -30px rgba(43,42,40,.45);font-size:15px;line-height:1.5;color:#3a382f">Accepts CSV/XLSX from any source</div>
+      <div style="background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.85);border-radius:14px;padding:22px 24px;box-shadow:0 16px 38px -30px rgba(43,42,40,.45);font-size:15px;line-height:1.5;color:#3a382f">Finds errors, applies rule-based corrections, exports clean output</div>
+      <div style="background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.85);border-radius:14px;padding:22px 24px;box-shadow:0 16px 38px -30px rgba(43,42,40,.45);font-size:15px;line-height:1.5;color:#3a382f">Same input → same output → same score (no drift)</div>
     </div>
   </div>
 </section>
 
-<!-- 2 — ENGINE REFERENCE -->
+<!-- WHAT'S INCLUDED -->
 <section class="section section-cream">
   <div class="container">
-    <div class="section-eyebrow">— ENGINE REFERENCE</div>
-    <h2 class="section-title">The signal chain.</h2>
-    <p class="section-sub">NgineAgent is the mastering studio for data. Load the raw take, scan it on the console, run it through the correction rack, and bounce a procurement-ready master. Four deterministic stages, every field accounted for.</p>
+    <div class="section-eyebrow">— WHAT'S INCLUDED</div>
+    <h2 class="section-title">What transfers in the acquisition.</h2>
+    <p class="section-sub">Complete platform, vertical products, all rule sets, documentation, and brands. HeyRoya, Kataloghub, CIP, MediReady, PerfectBook, Inspection, and TrapRoyaltiesPro — every domain schema, validation ruleset, and industry-specific logic pack included.</p>
 
-    <div class="chain-grid">
-      <div class="chain-step">
-        <div class="chain-stage">RAW TAKE — UPLOAD</div>
-        <h3 class="chain-title">Raw in.</h3>
-        <p class="chain-desc">CSV / XLSX catalog, exactly as recorded. The engine runs in place — no external calls, no retention.</p>
-      </div>
-      <div class="chain-step">
-        <div class="chain-stage">CONSOLE — VALIDATE</div>
-        <h3 class="chain-title">Every field gets a channel strip.</h3>
-        <p class="chain-desc">Each field is checked against the active domain ruleset, deterministically and reproducibly.</p>
-      </div>
-      <div class="chain-step">
-        <div class="chain-stage">RACK — CORRECT</div>
-        <h3 class="chain-title">Deterministic fixes, like plugins.</h3>
-        <p class="chain-desc">High-confidence corrections applied in the rack. No model, no guesswork — rules, in order.</p>
-      </div>
-      <div class="chain-step">
-        <div class="chain-stage">MASTER — BOUNCE</div>
-        <h3 class="chain-title">Procurement-ready master.</h3>
-        <p class="chain-desc">Clean output as CSV, XLSX, and a branded PDF — paired with the evidence that produced it.</p>
-      </div>
-    </div>
-
-    <div class="btn-row">
-      <a href="https://engine.usesmpt.com/pitch.pdf" target="_blank" rel="noopener" class="btn-primary">Engine reference <span>→</span></a>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin-top:36px">
+      <div style="background:rgba(255,255,255,.74);border:1px solid rgba(255,255,255,.85);border-radius:14px;padding:22px 24px;box-shadow:0 16px 38px -30px rgba(43,42,40,.45)"><div style="font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:#3E8F57;margin-bottom:9px">01</div><div style="font-family:var(--display);font-weight:600;font-size:17px;color:#262421">Engine core</div><div style="font-size:14px;line-height:1.5;color:#5A574F;margin-top:6px">Stateless, deterministic, production-ready.</div></div>
+      <div style="background:rgba(255,255,255,.74);border:1px solid rgba(255,255,255,.85);border-radius:14px;padding:22px 24px;box-shadow:0 16px 38px -30px rgba(43,42,40,.45)"><div style="font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:#3E8F57;margin-bottom:9px">02</div><div style="font-family:var(--display);font-weight:600;font-size:17px;color:#262421">Six vertical products</div><div style="font-size:14px;line-height:1.5;color:#5A574F;margin-top:6px">Each a domain preset on the same core.</div></div>
+      <div style="background:rgba(255,255,255,.74);border:1px solid rgba(255,255,255,.85);border-radius:14px;padding:22px 24px;box-shadow:0 16px 38px -30px rgba(43,42,40,.45)"><div style="font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:#3E8F57;margin-bottom:9px">03</div><div style="font-family:var(--display);font-weight:600;font-size:17px;color:#262421">All schemas &amp; rule packs</div><div style="font-size:14px;line-height:1.5;color:#5A574F;margin-top:6px">Every domain schema and validation ruleset.</div></div>
+      <div style="background:rgba(255,255,255,.74);border:1px solid rgba(255,255,255,.85);border-radius:14px;padding:22px 24px;box-shadow:0 16px 38px -30px rgba(43,42,40,.45)"><div style="font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:#3E8F57;margin-bottom:9px">04</div><div style="font-family:var(--display);font-weight:600;font-size:17px;color:#262421">All documentation</div><div style="font-size:14px;line-height:1.5;color:#5A574F;margin-top:6px">Full technical and operational documentation.</div></div>
+      <div style="background:rgba(255,255,255,.74);border:1px solid rgba(255,255,255,.85);border-radius:14px;padding:22px 24px;box-shadow:0 16px 38px -30px rgba(43,42,40,.45)"><div style="font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:#3E8F57;margin-bottom:9px">05</div><div style="font-family:var(--display);font-weight:600;font-size:17px;color:#262421">All domains &amp; brands</div><div style="font-size:14px;line-height:1.5;color:#5A574F;margin-top:6px">Clean IP transfer of the product brands.</div></div>
+      <div style="background:rgba(255,255,255,.74);border:1px solid rgba(255,255,255,.85);border-radius:14px;padding:22px 24px;box-shadow:0 16px 38px -30px rgba(43,42,40,.45)"><div style="font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:#3E8F57;margin-bottom:9px">06</div><div style="font-family:var(--display);font-weight:600;font-size:17px;color:#262421">Sample datasets</div><div style="font-size:14px;line-height:1.5;color:#5A574F;margin-top:6px">Representative data for each vertical.</div></div>
+      <div style="background:rgba(255,255,255,.74);border:1px solid rgba(255,255,255,.85);border-radius:14px;padding:22px 24px;box-shadow:0 16px 38px -30px rgba(43,42,40,.45)"><div style="font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:#3E8F57;margin-bottom:9px">07</div><div style="font-family:var(--display);font-weight:600;font-size:17px;color:#262421">Optional founding-team retention</div><div style="font-size:14px;line-height:1.5;color:#5A574F;margin-top:6px">Available as part of the deal structure.</div></div>
     </div>
   </div>
 </section>
 
-<!-- 3 — SIX PRODUCT SUMMARIES -->
+<!-- WHY BUYERS ACQUIRE IT -->
 <section class="section">
   <div class="container">
-    <div class="section-eyebrow">— PRODUCT SUMMARIES</div>
-    <h2 class="section-title">Ten products, one standard.</h2>
-    <p class="section-sub">Each product is the engine plus a domain preset — a ruleset tuned to one industry's standards. Same core, same evidence chain — different rules.</p>
+    <div class="section-eyebrow">— WHY BUYERS ACQUIRE IT</div>
+    <h2 class="section-title">Four reasons it gets bought.</h2>
 
-    <div class="product-grid">
-      <a class="product" href="https://heyroya.se/" target="_blank" rel="noopener">
-        <div class="product-num"><span>01</span><span class="product-tag music">Music rights</span></div>
-        <h3 class="product-name">HeyRoya</h3>
-        <p class="product-desc">Music rights validation. Catches metadata and rights-chain errors before they become lost royalties.</p>
-        <div class="product-rules">ISRC · ISWC · IPI · royalty gaps · §507(b)</div>
-      </a>
-      <a class="product" href="https://kataloghub.se/" target="_blank" rel="noopener">
-        <div class="product-num"><span>02</span><span class="product-tag music">Catalog</span></div>
-        <h3 class="product-name">Kataloghub</h3>
-        <p class="product-desc">Catalog correction. Validates and cleans catalog data against industry rulesets before ingestion.</p>
-        <div class="product-rules">ISRC · ISWC · IPI · catalog integrity</div>
-      </a>
-      <a class="product" href="https://useverseiq.com/" target="_blank" rel="noopener">
-        <div class="product-num"><span>03</span><span class="product-tag music">Rights intelligence</span></div>
-        <h3 class="product-name">VerseIQ</h3>
-        <p class="product-desc">Global rights intelligence. Analyzes music rights across territories to surface gaps in metadata, registration, and market coverage.</p>
-        <div class="product-rules">territories · registration · coverage gaps</div>
-      </a>
-      <a class="product" href="https://traproyaltiespro.com/" target="_blank" rel="noopener">
-        <div class="product-num"><span>04</span><span class="product-tag music">Publishers</span></div>
-        <h3 class="product-name">TrapRoyaltiesPro</h3>
-        <p class="product-desc">Rights infrastructure for U.S. publishers. Validates catalogs, delivers CWRs, and runs audit and legal workflows.</p>
-        <div class="product-rules">CWR · IPI · audit · legal workflows</div>
-      </a>
-      <a class="product" href="https://cip.usesmpt.com/" target="_blank" rel="noopener">
-        <div class="product-num"><span>05</span><span class="product-tag verify">Communications</span></div>
-        <h3 class="product-name">CIP</h3>
-        <p class="product-desc">Communications compliance. Scores communications surfaces across diagnostic channels.</p>
-        <div class="product-rules">9 diagnostic channels · scoring</div>
-      </a>
-      <a class="product" href="https://usemediready.com/" target="_blank" rel="noopener">
-        <div class="product-num"><span>06</span><span class="product-tag health">Healthcare</span></div>
-        <h3 class="product-name">MediReady</h3>
-        <p class="product-desc">Healthcare claim preparation. Prepares clean, compliant claims and denial corrections.</p>
-        <div class="product-rules">CARC / RARC · NPI · CPT</div>
-      </a>
-      <a class="product" href="https://denials.usesmpt.com/" target="_blank" rel="noopener">
-        <div class="product-num"><span>07</span><span class="product-tag health">Denials</span></div>
-        <h3 class="product-name">Denial Engine</h3>
-        <p class="product-desc">Healthcare denial management. Denied claim to analysis, corrected claim, and payer-ready appeal packet — grounded in the original denial text.</p>
-        <div class="product-rules">CARC / RARC · CPT/HCPCS · ICD-10-CM · appeals</div>
-      </a>
-      <a class="product" href="https://tax.perfecthold.online/" target="_blank" rel="noopener">
-        <div class="product-num"><span>08</span><span class="product-tag workflow">Accounting</span></div>
-        <h3 class="product-name">PerfectBook</h3>
-        <p class="product-desc">Accounting data quality. Validates and corrects ledger data for clean, audit-ready books.</p>
-        <div class="product-rules">SIE / BAS ledger · vouchers · VAT</div>
-      </a>
-      <a class="product" href="https://ops.besiktningskvinna.se/" target="_blank" rel="noopener">
-        <div class="product-num"><span>09</span><span class="product-tag workflow">Inspections</span></div>
-        <h3 class="product-name">Inspection</h3>
-        <p class="product-desc">Property &amp; field assessment validation. Turns raw inspection data into audit-ready reports.</p>
-        <div class="product-rules">Besiktning protocols · condition scale</div>
-      </a>
-      <a class="product" href="https://usewebcheck.com/" target="_blank" rel="noopener">
-        <div class="product-num"><span>10</span><span class="product-tag workflow">Web</span></div>
-        <h3 class="product-name">Web Assessment</h3>
-        <p class="product-desc">Web operations validation. Reviews websites, payment flows, email automations, and content — one operational partner, not five vendors.</p>
-        <div class="product-rules">site · payment flows · email · content</div>
-      </a>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;margin-top:36px">
+      <div style="background:rgba(255,255,255,.74);border:1px solid rgba(255,255,255,.85);border-radius:16px;padding:26px;box-shadow:0 16px 38px -30px rgba(43,42,40,.45)"><div style="font-family:var(--display);font-weight:600;font-size:19px;color:#262421;margin-bottom:10px">Eliminates revenue leakage</div><div style="font-size:14.5px;line-height:1.55;color:#5A574F">Catches errors that cause unpaid royalties, rejected claims, compliance failures, accounting breaks, and invalid inspection reports.</div></div>
+      <div style="background:rgba(255,255,255,.74);border:1px solid rgba(255,255,255,.85);border-radius:16px;padding:26px;box-shadow:0 16px 38px -30px rgba(43,42,40,.45)"><div style="font-family:var(--display);font-weight:600;font-size:19px;color:#262421;margin-bottom:10px">Reduces operational risk</div><div style="font-size:14.5px;line-height:1.55;color:#5A574F">Automated validation replaces manual review, reduces human error, and ensures consistent compliance.</div></div>
+      <div style="background:rgba(255,255,255,.74);border:1px solid rgba(255,255,255,.85);border-radius:16px;padding:26px;box-shadow:0 16px 38px -30px rgba(43,42,40,.45)"><div style="font-family:var(--display);font-weight:600;font-size:19px;color:#262421;margin-bottom:10px">Accelerates time-to-market</div><div style="font-size:14.5px;line-height:1.55;color:#5A574F">Replaces 18–24 months of internal build time.</div></div>
+      <div style="background:rgba(255,255,255,.74);border:1px solid rgba(255,255,255,.85);border-radius:16px;padding:26px;box-shadow:0 16px 38px -30px rgba(43,42,40,.45)"><div style="font-family:var(--display);font-weight:600;font-size:19px;color:#262421;margin-bottom:10px">Multi-vertical scale</div><div style="font-size:14.5px;line-height:1.55;color:#5A574F">Six products across five industries from one engine.</div></div>
     </div>
   </div>
 </section>
 
-<!-- 4 — PERFORMANCE METRICS -->
+<!-- PERFORMANCE PROOF -->
 <section class="section section-cream">
   <div class="container">
-    <div class="section-eyebrow">— PERFORMANCE METRICS</div>
-    <h2 class="section-title">How performance is measured.</h2>
-    <p class="section-sub">NgineAgent reports its own telemetry, derived from real engine runs — not marketing numbers. The live engine exposes current stats; the dimensions that matter are below.</p>
+    <div class="section-eyebrow">— PERFORMANCE PROOF</div>
+    <h2 class="section-title">Measured on real engine runs.</h2>
+    <p class="section-sub">Telemetry from production runs — not marketing numbers. The live engine exposes current stats.</p>
 
-    <div class="metrics-grid">
-      <div class="metric">
-        <div class="m-key">Determinism</div>
-        <div class="m-headline">Same input → same score.</div>
-        <div class="m-desc">Every run is reproducible. Re-run a file and the corrections and score are identical — verifiable, not asserted.</div>
-      </div>
-      <div class="metric">
-        <div class="m-key">Latency</div>
-        <div class="m-headline">Raw to master in milliseconds.</div>
-        <div class="m-desc">A file is validated, corrected, and bounced in the time a console takes to scan a take. Live timing is shown in the engine.</div>
-      </div>
-      <div class="metric">
-        <div class="m-key">Coverage</div>
-        <div class="m-headline">Six domain presets, live.</div>
-        <div class="m-desc">Music, healthcare, communications, accounting, inspection, and web presets all run on the same engine build.</div>
-      </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:36px">
+      <div style="background:rgba(255,255,255,.74);border:1px solid rgba(255,255,255,.85);border-radius:16px;padding:28px 24px;box-shadow:0 16px 38px -30px rgba(43,42,40,.45)"><div style="font-family:var(--display);font-size:38px;font-weight:600;letter-spacing:-.02em;color:#3E8F57;line-height:1">7–60 ms</div><div style="font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#5A574F;margin-top:12px">Typical run time</div></div>
+      <div style="background:rgba(255,255,255,.74);border:1px solid rgba(255,255,255,.85);border-radius:16px;padding:28px 24px;box-shadow:0 16px 38px -30px rgba(43,42,40,.45)"><div style="font-family:var(--display);font-size:38px;font-weight:600;letter-spacing:-.02em;color:#3E8F57;line-height:1">&lt;100 ms</div><div style="font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#5A574F;margin-top:12px">PDF export</div></div>
+      <div style="background:rgba(255,255,255,.74);border:1px solid rgba(255,255,255,.85);border-radius:16px;padding:28px 24px;box-shadow:0 16px 38px -30px rgba(43,42,40,.45)"><div style="font-family:var(--display);font-size:38px;font-weight:600;letter-spacing:-.02em;color:#3E8F57;line-height:1">38–50K+</div><div style="font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#5A574F;margin-top:12px">Rows validated</div></div>
+      <div style="background:rgba(255,255,255,.74);border:1px solid rgba(255,255,255,.85);border-radius:16px;padding:28px 24px;box-shadow:0 16px 38px -30px rgba(43,42,40,.45)"><div style="font-family:var(--display);font-size:38px;font-weight:600;letter-spacing:-.02em;color:#3E8F57;line-height:1">100%</div><div style="font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#5A574F;margin-top:12px">Success rate</div></div>
     </div>
     <div class="btn-row">
       <a href="https://engine.usesmpt.com/" target="_blank" rel="noopener" class="btn-secondary">See live stats in the engine →</a>
@@ -734,40 +673,54 @@ footer {
   </div>
 </section>
 
-<!-- 5 — EVIDENCE CHAIN -->
+<!-- WHY IT'S HARD TO BUILD -->
 <section class="section">
   <div class="container">
-    <div class="section-eyebrow">— EVIDENCE CHAIN</div>
-    <h2 class="section-title">Every correction, provable.</h2>
-    <p class="section-sub">The output is never just a cleaned file. Each run produces a linked chain — from the diagnostic report, through the correction worksheet, to the bounced master — so any change can be traced back to the rule that made it.</p>
+    <div class="section-eyebrow">— WHY IT'S HARD TO BUILD</div>
+    <h2 class="section-title">Years of domain engineering.</h2>
+    <div class="origin-block">
+      <p>NgineAgent represents years of domain-specific engineering that cannot be replicated quickly or cheaply. Replicating this internally would require 18–24 months and significant specialized talent.</p>
+    </div>
+  </div>
+</section>
 
-    <div class="evidence-flow">
-      <div class="evidence-node">
-        <div class="e-step">STEP 01</div>
-        <div class="e-name">Report</div>
-        <div class="e-desc">Diagnostic of every field checked, every issue found, scored against the active ruleset.</div>
-      </div>
-      <div class="evidence-node">
-        <div class="e-step">STEP 02</div>
-        <div class="e-name">Worksheet</div>
-        <div class="e-desc">Each correction recorded with its before, after, and the rule that triggered it.</div>
-      </div>
-      <div class="evidence-node">
-        <div class="e-step">STEP 03</div>
-        <div class="e-name">Corrected master</div>
-        <div class="e-desc">Procurement-ready output as CSV, XLSX, and a branded PDF — traceable to the worksheet.</div>
+<!-- ASKING PRICE -->
+<section class="section section-cream">
+  <div class="container">
+    <div class="section-eyebrow">— ASKING PRICE</div>
+    <h2 class="section-title">Below replacement cost.</h2>
+    <div style="background:rgba(255,255,255,.74);border:1px solid rgba(255,255,255,.85);border-radius:18px;padding:38px 36px;box-shadow:0 18px 44px -30px rgba(43,42,40,.45);margin-top:32px;max-width:680px">
+      <div style="font-family:var(--display);font-size:clamp(42px,7vw,64px);font-weight:600;letter-spacing:-.03em;color:#3E8F57;line-height:1">€2–4M</div>
+      <p style="font-size:15.5px;line-height:1.6;color:#5A574F;margin-top:16px">Below replacement cost — estimated <strong style="color:#262421;font-weight:600">€3–6M and 18–24 months</strong> to rebuild.</p>
+      <div style="display:flex;gap:28px;flex-wrap:wrap;margin-top:20px;font-family:var(--mono);font-size:12px;letter-spacing:.05em;color:#5A574F">
+        <div><span style="color:#262421;font-weight:600">Build:</span> €3–6M · 18–24 months</div>
+        <div><span style="color:#3E8F57;font-weight:600">Buy NgineAgent:</span> €2–4M · 30–60 days</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 6 — CONTACT / INQUIRY -->
+<!-- DEAL STRUCTURES -->
+<section class="section">
+  <div class="container">
+    <div class="section-eyebrow">— DEAL STRUCTURES</div>
+    <h2 class="section-title">Three ways to structure it.</h2>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;margin-top:36px">
+      <div style="background:rgba(255,255,255,.74);border:1px solid rgba(255,255,255,.85);border-radius:16px;padding:28px 26px;box-shadow:0 16px 38px -30px rgba(43,42,40,.45)"><div style="font-family:var(--mono);font-size:11px;letter-spacing:.16em;color:#3E8F57;margin-bottom:10px">STRUCTURE A</div><div style="font-family:var(--display);font-weight:600;font-size:19px;color:#262421">IP Purchase</div><div style="font-family:var(--display);font-size:24px;font-weight:600;color:#262421;margin-top:12px">€2–2.5M</div></div>
+      <div style="background:rgba(255,255,255,.74);border:1px solid rgba(255,255,255,.85);border-radius:16px;padding:28px 26px;box-shadow:0 16px 38px -30px rgba(43,42,40,.45)"><div style="font-family:var(--mono);font-size:11px;letter-spacing:.16em;color:#3E8F57;margin-bottom:10px">STRUCTURE B</div><div style="font-family:var(--display);font-weight:600;font-size:19px;color:#262421">IP + Retention</div><div style="font-family:var(--display);font-size:24px;font-weight:600;color:#262421;margin-top:12px">€2.5–3.5M</div></div>
+      <div style="background:rgba(255,255,255,.74);border:1px solid rgba(255,255,255,.85);border-radius:16px;padding:28px 26px;box-shadow:0 16px 38px -30px rgba(43,42,40,.45)"><div style="font-family:var(--mono);font-size:11px;letter-spacing:.16em;color:#3E8F57;margin-bottom:10px">STRUCTURE C</div><div style="font-family:var(--display);font-weight:600;font-size:19px;color:#262421">Acqui-Hire + Earnout</div><div style="font-family:var(--display);font-size:24px;font-weight:600;color:#262421;margin-top:12px">€2M base</div><div style="font-size:14px;color:#5A574F;margin-top:6px">+ up to €1.5M earnout</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
 <section class="final-cta">
   <div class="container">
     <div class="final-cta-inner">
-      <h2>Run the engine against <span class="italic">your own data.</span></h2>
-      <p>For acquisition inquiries, the full data room, and a live walkthrough of NgineAgent on a file you bring — get in touch. Serious inquiries answered directly.</p>
-      <a href="/contact/" class="btn-cta-light">Open an inquiry →</a>
+      <h2>Acquisition <span class="italic">inquiries.</span></h2>
+      <p>Northern Star Systems · Glenn Carter — Founder &amp; CEO · Stockholm, Sweden.<br>For the full data room and a live walkthrough on a file you bring, get in touch. Serious inquiries answered directly.</p>
+      <a href="mailto:glenn@northernstarsystems.com" class="btn-cta-light">glenn@northernstarsystems.com →</a>
     </div>
   </div>
 </section>
@@ -780,12 +733,12 @@ footer {
           <svg class="brand-mark" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <circle cx="100" cy="100" r="78" fill="none" stroke="#1F2937" stroke-width="1" opacity="0.15"/>
             <circle cx="100" cy="100" r="62" fill="none" stroke="#1F2937" stroke-width="1" opacity="0.12"/>
-            <polygon points="100,38 112,100 100,108 88,100" fill="#FF6B35"/>
+            <polygon points="100,38 112,100 100,108 88,100" fill="#5A7D55"/>
             <polygon points="100,162 112,100 100,92 88,100" fill="#1F2937"/>
             <polygon points="38,100 100,88 108,100 100,112" fill="#1F2937" opacity="0.35"/>
             <polygon points="162,100 100,88 92,100 100,112" fill="#1F2937" opacity="0.35"/>
             <circle cx="100" cy="100" r="5" fill="#FAFAF7" stroke="#1F2937" stroke-width="1.5"/>
-            <circle cx="100" cy="100" r="1.5" fill="#FF6B35"/>
+            <circle cx="100" cy="100" r="1.5" fill="#5A7D55"/>
           </svg>
           <span class="brand-text">Northern Star <span class="accent">Systems</span></span>
         </a>
@@ -821,7 +774,8 @@ footer {
         <ul>
           <li><a href="/acquirers/">For Acquirers</a></li>
           <li><a href="/about/">About</a></li>
-          <li><a href="/contact/">Contact</a></li>
+          <li><a href="mailto:hello@northernstarsystems.com">hello@northernstarsystems.com</a></li>
+          <li><a href="mailto:security@northernstarsystems.com">security@northernstarsystems.com</a></li>
         </ul>
       </div>
     </div>
